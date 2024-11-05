@@ -360,8 +360,8 @@ const Inventory = () => {
         if (docSnap.exists()) {
           const inventoryData = docSnap.data().inventory || [];
           const wishlistData = docSnap.data().wishlist || [];
-          setGlobalInventoryList(inventoryData);
-          setGlobalWishlist(wishlistData);
+          setGlobalInventoryList(inventoryData.reverse());
+          setGlobalWishlist(wishlistData.reverse());
         } else {
           toast.error("No Document found!");
         }
