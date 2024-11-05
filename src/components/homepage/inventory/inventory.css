@@ -1,0 +1,1445 @@
+.inventoryModeComp {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1%;
+    background-color: rgba(255, 255, 255, 0.125);
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 85%;
+
+    .inventorySearch {
+        width: 100%;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: relative;
+
+        .formSearch {
+            display: flex;
+            flex: 8;
+
+            input {
+                font-size: 0.875rem;
+                margin-top: 20px;
+                margin-left: 26px;
+                border: 1px solid white;
+                padding: 8px;
+                border: none;
+                outline: none;
+                background-color: rgba(17, 25, 40, 0.75);
+                color: white;
+                border-radius: 5px;
+                width: 30%;
+                align-self: flex-end;
+
+                &:focus {
+                    border: 1px solid rgba(60, 110, 208, 1);
+                }
+            }
+
+            .globalManualEntry {
+                .modalButton {
+                    position: absolute;
+                    left: 88.85%;
+                    top: 37.2%;
+                    padding: 0.5rem;
+                    border: none;
+                    background-color: rgba(60, 110, 208, 0.8);
+                    color: white;
+                    border-radius: 0.3125rem;
+                    cursor: pointer;
+                    font-size: 0.875rem;
+                    font-weight: 500;
+                    &:hover {
+                        background-color: rgba(60, 110, 208, 1);
+                    }
+                }
+
+                .modalContainer {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    z-index: 100;
+    
+                    .modal {
+                        position: absolute;
+                        top: 25%;
+                        left: 50%;
+                        transform: translate(-50%, -25%);
+                        background-color: rgba(30, 44, 70, 0.925);
+                        border-radius: 12px;
+                        width: 50%;
+                        height: 85%;
+                        display: flex;
+                        flex-direction: column;
+
+                        .modalWishlistSwitch {
+                            position: absolute;
+                            left: 75%;
+                            top: -1%;
+        
+                            input {
+                                appearance: none;
+                                position: relative;
+                                width: 6.25rem;
+                                height: 1.875rem;
+                                margin-right: 0.625rem;
+                                border-radius: 1.5625rem;
+                                background-color: rgba(255, 255, 255, 0.125);
+                                transition: background .3s;
+                                outline: none;
+                                cursor: pointer;
+                                font-size: 0.875rem;
+                            }
+        
+                            input::before {
+                                content: "";
+                                position: absolute;
+                                top: 50%;
+                                left: 15%;
+                                transform: translate(-50%, -50%);
+                                border-radius: 50%;
+                                height: 1.25rem;
+                                width: 1.25rem;
+                                background-color: white;
+                                transition: left .3s;
+                            }
+        
+                            input:checked {
+                                background-color: rgba(60, 110, 208, 1);
+                            }
+        
+                            input:checked::before {
+                                left: 85%;
+                            }
+        
+                            input::after {
+                                position: absolute;
+                                content: "Inventory";
+                                color: white;
+                                top: 50%;
+                                left: 60%;
+                                transform: translate(-50%, -50%);
+                            }
+                    
+                            input:checked::after {
+                                position: absolute;
+                                content: "Wishlist";
+                                color: white;
+                                top: 50%;
+                                left: 40%;
+                                transform: translate(-50%, -50%);
+                            }
+                        }
+    
+                        .closeIcon {
+                            position: absolute;
+                            left: 92%;
+                            top: 2.3%;
+                            cursor: pointer;
+                        }
+    
+                        form {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            gap: 1.25rem;
+                            flex: 4;
+    
+                            input {
+                                padding: 1.25rem;
+                                border: none;
+                                outline: none;
+                                background-color: rgba(17, 25, 40, 0.6);
+                                color: white;
+                                border-radius: 0.3125rem;
+        
+                                &:focus {
+                                    border: 1px solid rgba(60, 110, 208, 1);
+                                }
+                            }
+    
+                            label {
+                                width: 50%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                cursor: pointer;
+                                text-decoration: underline;
+                                gap: 1.25rem;
+    
+                                img {
+                                    margin-top: 1.25rem;
+                                    width: 6.25rem;
+                                    height: 6.25rem;
+                                    border-radius: 0.625rem;
+                                    object-fit: cover;
+                                    opacity: 0.6;
+                                }
+                            }
+    
+                            .manualCardInfo {
+                                display: flex;
+                                width: 90%;
+                                justify-content: space-between;
+
+                                div {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 1.25rem;
+
+                                    input {
+                                        font-size: 0.875rem;
+                                        width: 100%;
+                                        margin: 0;
+                                    }
+                                }
+                            }
+                        }
+    
+                        .buttons {
+                            flex: 1;
+                            display: flex;
+                            align-items: start;
+                            justify-content: center;
+    
+                            button {
+                                margin-top: 1.25rem;
+                                text-align: center;
+                                width: 14rem;
+                                height: 35%;
+                                padding: 0.5rem;
+                                border: none;
+                                background-color: rgba(60, 110, 208, 0.8);
+                                color: white;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                font-size: 0.875rem;
+                                font-weight: 500;
+        
+                                &:hover {
+                                    background-color: rgba(60, 110, 208, 1);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    .searchListsSeparator {
+        width: 95%;
+        margin: 10px auto;
+        height: 2px;
+        background-color: rgba(255, 255, 255, 0.125);
+    }
+
+    .lists {
+        flex: 12;
+        display: flex;
+        margin-bottom: 15px;
+        width: 95%;
+        overflow: hidden;
+
+        .invTab {
+            display: none;
+        }
+
+        .wishTab {
+            display: none;
+        }
+
+        .inventoryList {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-height: 100%;
+            position: relative;
+
+            h3 {
+                position: absolute;
+                left: 42.5%;
+            }
+
+            .items {
+                margin-top: 30px;
+                overflow-y: scroll;
+
+                .item {
+                    display: flex;
+                    height: 70px;
+                    width: 95%;
+                    margin: 8px auto;
+                    align-items: center;
+                    justify-content: start;
+                    border: 1px solid rgba(255, 255, 255, 0.125);
+                    border-radius: 2px;
+                    padding: 2px;
+                    cursor: pointer;
+                    position: relative;
+
+                    img {
+                        width: 40px;
+                        height: 50px;
+                        object-fit: contain;
+                        margin: none;
+                    }
+
+                    .itemInfo {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5px;
+                        gap: 2px;
+
+                        .cardName {
+                            font-size: 16px;
+                            max-width: 14rem;
+                            color: white;
+                        }
+
+                        p {
+                            font-size: 10px;
+                            justify-content: start;
+                            padding: 0;
+                            text-align: left;
+                            font-weight: lighter;
+                            color: rgba(255, 255, 255, 0.548);
+                        }
+                    }
+
+                    .modifyCount {
+                        display: flex;
+                        width: 30%;
+                        position: absolute;
+                        left: 45%;
+                        
+                        form {
+                            gap: 0.5rem;
+                            display: flex;
+                            justify-content: flex-end;
+
+                            input {
+                                padding: 8px;
+                                border: none;
+                                outline: none;
+                                background-color: rgba(17, 25, 40, 1);
+                                color: white;
+                                border-radius: 5px;
+                                font-size: 0.875rem;
+                                width: 25%;
+                                &:focus {
+                                    border: 1px solid rgba(60, 110, 208, 1);
+                                }
+                            }
+    
+                            button {
+                                padding: 8px;
+                                border: none;
+                                background-color: rgba(60, 110, 208, 0.8);
+                                color: white;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                font-weight: 500;
+                                font-size: 0.875rem;
+                                &:hover {
+                                    background-color: rgba(60, 110, 208, 1);
+                                }
+    
+                                &.countSubtract {
+                                    background-color: rgba(255, 88, 70, 0.8);
+    
+                                    &:hover {
+                                        background-color: rgba(255, 88, 70, 1);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .owned {
+                        position: absolute;
+                        left: 80%;
+
+                        span {
+                            font-size: 14px;
+                        }
+
+                        .ownedSetCode {
+                            font-size: 12px;
+                            color: rgba(255, 255, 255, 0.548);
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .listsSeparator {
+            width: 2px;
+            margin: auto;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.125);
+        }
+
+        .wishList {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            width: 100%;
+            max-height: 100%;
+            position: relative;
+
+            h3 {
+                position: absolute;
+                left: 42.5%;
+            }
+
+            .items {
+                margin-top: 30px;
+                overflow-y: scroll;
+
+                .item {
+                    display: flex;
+                    height: 70px;
+                    width: 95%;
+                    margin: 8px auto;
+                    align-items: center;
+                    justify-content: start;
+                    border: 1px solid rgba(255, 255, 255, 0.125);
+                    border-radius: 2px;
+                    padding: 2px;
+                    cursor: pointer;
+                    position: relative;
+
+                    img {
+                        width: 40px;
+                        height: 50px;
+                        object-fit: contain;
+                        margin: none;
+                    }
+
+                    .itemInfo {
+                        display: flex;
+                        flex-direction: column;
+                        padding: 5px;
+                        gap: 2px;
+
+                        .cardName {
+                            font-size: 16px;
+                            color: white;
+                        }
+
+                        p {
+                            font-size: 10px;
+                            justify-content: start;
+                            padding: 0;
+                            text-align: left;
+                            font-weight: lighter;
+                            color: rgba(255, 255, 255, 0.548);
+                        }
+                    }
+
+                    .modifyCount {
+                        display: flex;
+                        width: 30%;
+                        position: absolute;
+                        left: 45%;
+                        
+                        form {
+                            gap: 0.5rem;
+                            display: flex;
+                            justify-content: flex-end;
+
+                            input {
+                                padding: 8px;
+                                border: none;
+                                outline: none;
+                                background-color: rgba(17, 25, 40, 1);
+                                color: white;
+                                border-radius: 5px;
+                                width: 25%;
+                                font-size: 0.875rem;
+                                &:focus {
+                                    border: 1px solid rgba(60, 110, 208, 1);
+                                }
+                            }
+                            
+                            button {
+                                padding: 8px;
+                                border: none;
+                                background-color: rgba(60, 110, 208, 0.8);
+                                color: white;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                font-size: 0.875rem;
+                                font-weight: 500;
+                                &:hover {
+                                    background-color: rgba(60, 110, 208, 1);
+                                }
+    
+                                &.countSubtract {
+                                    background-color: rgba(255, 88, 70, 0.8);
+    
+                                    &:hover {
+                                        background-color: rgba(255, 88, 70, 1);
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .owned {
+                        position: absolute;
+                        left: 80%;
+
+                        span {
+                            font-size: 14px;
+                        }
+
+                        .ownedSetCode {
+                            font-size: 12px;
+                            color: rgba(255, 255, 255, 0.548);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                input {
+                    margin-left: 1.2rem;
+                }
+
+                .globalManualEntry {
+                    .modalButton {
+                        left: 86.35%;
+                        top: 37.2%;
+                    }
+
+                    .modalContainer {
+                        .modal {
+                            width: 70%;
+        
+                            .modalWishListSwitch {
+                                left: 77%;
+                            }
+        
+                            .closeIcon {
+                                left: 92.5%;
+                            }
+                            form {
+                                .manualCardInfo {
+                                    div {
+                                        width: 14rem;
+                                    }
+                                }
+
+                                .buttons {
+                                    button {
+                                        height: 3rem;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .lists {
+            .inventoryList {
+                .items {
+                    .item {
+                        .itemInfo {
+                            .cardName {
+                                white-space: wrap;
+                                max-width: 9.5rem;
+                            }
+                        }
+
+                        .modifyCount {
+                            left: 50%;
+                            form {
+                                gap: 0.25rem;
+                                input {
+                                    width: 30%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wishList {
+                .items {
+                    .item {
+                        .itemInfo {
+                            .cardName {
+                                white-space: wrap;
+                                max-width: 9.5rem;
+                            }
+                        }
+
+                        .modifyCount {
+                            left: 50%;
+                            form {
+                                gap: 0.25rem;
+                                input {
+                                    width: 30%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 85.7%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1339px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 85%;
+                    }
+
+                    .modalContainer {
+                        .modal {
+                            .buttons {
+                                button {
+                                    margin-top: 0rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 84.8%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1265px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalContainer {
+                        .modal {
+                            form {
+                                .manualCardInfo {
+                                    div {
+                                        width: 13rem;
+                                    }
+                                }
+                            }
+
+                            .buttons {
+                                button {
+                                    margin-top: 0.25rem;
+                                    width: 13rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 84.5%;
+                    }
+                }
+            }
+        }
+
+        .lists {
+            .inventoryList {
+                .items {
+                    .item {
+                        .itemInfo {
+                            .cardName {
+                                font-size: 0.875rem;
+                            }
+
+                            p {
+                                font-size: 0.625rem;
+                            }
+                        }
+
+                        .modifyCount {
+                            form {
+                                position: absolute;
+                                left: 50%;
+
+                                input {
+                                    position: absolute;
+                                    top: -97%;
+                                    width: 2.1rem;
+                                    padding: 2px;
+                                }
+
+                                button {
+                                    padding: 0.25rem;
+                                }
+                            }
+                        }
+
+                        .owned {
+                            span {
+                                font-size: 0.75rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wishList {
+                .items {
+                    .item {
+                        .itemInfo {
+                            .cardName {
+                                font-size: 0.875rem;
+                            }
+
+                            p {
+                                font-size: 0.625rem;
+                            }
+                        }
+
+                        .modifyCount {
+                            form {
+                                position: absolute;
+                                left: 50%;
+
+                                input {
+                                    position: absolute;
+                                    top: -97%;
+                                    width: 2.1rem;
+                                    padding: 2px;
+                                }
+
+                                button {
+                                    padding: 0.25rem;
+                                }
+                            }
+                        }
+
+                        .owned {
+                            span {
+                                font-size: 0.75rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1230px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 83.8%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1149px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 83.5%;
+                    }
+
+                    .modalContainer {
+                        .modal {
+                            .modalWishlistSwitch {
+                                left: 72%;
+                            }
+
+                            form {
+                                .manualCardInfo {
+                                    div {
+                                        width: 12rem;
+                                    }
+                                }
+                            }
+
+                            .buttons {
+                                button {
+                                    width: 12rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1130px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 82.7%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1120px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 82.5%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 82.5%;
+                    }
+                }
+            }
+        }
+
+        .lists {
+            .inventoryList {
+                .items {
+                    .item {
+                        .itemInfo {
+                            .cardName {
+                                max-width: 8rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wishList {
+                .items {
+                    .item {
+                        .itemInfo {
+                            .cardName {
+                                max-width: 8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1076px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                input {
+                    margin-left: 1.05rem;
+                }
+
+                .globalManualEntry {
+                    .modalButton {
+                        left: 82%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                input {
+                    margin-left: 0.85rem;
+                    width: 35%;
+                }
+
+                .globalManualEntry {
+                    .modalButton {
+                        left: 81.6%;
+                        top: 37.2%;
+                    }
+
+                    .modalContainer {
+                        .modal {
+                            width: 70%;
+        
+                            .modalWishlistSwitch {
+                                left: 72%;
+
+                                input {
+                                    font-size: 0.875rem;
+                                }
+                            }
+        
+                            form {
+                                .manualCardInfo {
+                                    div {
+                                        width: 10rem;
+                                    }
+                                }
+
+                                .buttons {
+                                    button {
+                                        margin-top: 0;
+                                        width: 10rem;
+                                        height: 2.5rem;
+                                    }
+                                }
+                            }
+        
+                        }
+                    }
+                }
+            }
+        }
+
+        .lists {
+            .inventoryList {
+                .items {
+                    .item {
+                        .itemInfo {
+                            .cardName {
+                                white-space: wrap;
+                                font-size: 14px;
+                                max-width: 7.5rem;
+                            }
+
+                            p {
+                                font-size: 8px;
+                            }
+                        }
+
+                        .modifyCount {
+                            form {
+                                position: absolute;
+                                left: 50%;
+
+                                input {
+                                    position: absolute;
+                                    top: -97%;
+                                    width: 2.1rem;
+                                    padding: 2px;
+                                }
+
+                                button {
+                                    padding: 4px;
+                                }
+                            }
+                        }
+
+                        .owned {
+                            span {
+                                font-size: 10px;
+                            }
+
+                            .ownedSetCode {
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .wishList {
+                .items {
+                    .item {
+                        .itemInfo {
+                            .cardName {
+                                white-space: wrap;
+                                font-size: 14px;
+                                max-width: 7.5rem;
+                            }
+
+                            p {
+                                font-size: 8px;
+                            }
+                        }
+
+                        .modifyCount {
+                            form {
+                                position: absolute;
+                                left: 50%;
+
+                                input {
+                                    position: absolute;
+                                    top: -97%;
+                                    width: 2.1rem;
+                                    padding: 2px;
+                                }
+
+                                button {
+                                    padding: 4px;
+                                }
+                            }
+                        }
+
+                        .owned {
+                            span {
+                                font-size: 10px;
+                            }
+
+                            .ownedSetCode {
+                                font-size: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .inventoryModeComp {
+        margin-top: 3rem;
+        width: 95%;
+
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 82.3%;
+                        top: 37.2%;
+                    }
+
+                    .modalContainer {
+                        .modal {
+                            width: 80%;
+        
+                            .modalWishlistSwitch {
+                                left: 70%;
+                            }
+        
+                            form {
+                                .manualCardInfo {
+                                    div {
+                                        width: 9rem;
+                                    }
+                                }
+
+                                .buttons {
+                                    button {
+                                        margin-top: 0;
+                                        width: 9rem;
+                                        height: 2.5rem;
+                                    }
+                                }
+                            }
+        
+                        }
+                    }
+                }
+            }
+        }
+
+        .lists {
+            .inventoryList {
+                h3 {
+                    left: 32%;
+                }
+            }
+
+            .wishList {
+                h3 {
+                    left: 38%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                input {
+                    width: 50%;
+                    margin-left: 0.5rem;
+                }
+
+                .globalManualEntry {
+                    .modalButton {
+                        left: 56.8vw;
+                        top: 37.2%;
+                    }
+
+                    .modalContainer {
+                        height: 101%;
+
+                        .modal {
+                            .closeIcon {
+                                left: 88.5%;
+                            }
+
+                            .modalWishlistSwitch {
+                                left: 85%;
+                                top: 4%;
+
+                                input {
+                                    left: -45%;
+                                    width: 4.375rem;
+                                    font-size: 0.875rem;
+                                }
+
+                                input::before {
+                                    left: 22%
+                                }
+
+                                input:checked::before {
+                                    left: 78%;
+                                }
+
+                                input::after {
+                                    content: "Inv";
+                                }
+
+                                input:checked::after {
+                                    content: "Wish";
+                                }
+                            }
+                        }
+
+                        form {
+                            .manualCardInfo {
+                                gap: 20px;
+                                width: 90%;
+                                overflow-y: scroll;
+                                overflow-x: hidden;
+                                flex-direction: column;
+                                height: 22rem;
+    
+                                div {
+                                    margin: 0 auto;
+                                    width: 14rem;
+    
+                                    input {
+                                        height: 2rem;
+                                    }
+                                }
+                            }
+                            
+                            .buttons {
+                                align-items: flex-end;
+    
+                                button {
+                                    margin-bottom: 2rem;
+                                }
+                            }
+    
+                        }
+                    }
+                }
+            }
+        }
+
+        .lists {
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            border-top: none;
+            border-radius: 5px;
+
+            .listsSeparator {
+                display: none;
+            }
+
+            .tabHeaders {
+                height: 2rem;
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+                position: absolute;
+                z-index: 10;
+            }
+
+            .tabs {
+                display: none;
+            }
+
+            .active {
+                display: block;
+
+                .items {
+                    max-height: 290px;
+                }
+            }
+
+            .invTab {
+                display: block;
+                width: 50%;
+                height: 2rem;
+                text-align: left;
+                padding-left: 8px;
+                line-height: 2rem;
+                border-radius: 5px 5px 0px 0px;
+                border: 1px solid rgba(255, 255, 255, 0.125);
+                border-left: none;
+                border-bottom: none;
+                cursor: pointer;
+                font-weight: bold;
+                
+                &.nonActive {
+                    font-weight: normal;
+                    border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+                }
+            }
+            
+            .wishTab {
+                height: 2rem;
+                padding-left: 8px;
+                text-align: left;
+                line-height: 2rem;
+                border: 1px solid rgba(255, 255, 255, 0.125);
+                display: block;
+                width: 50%;
+                border-radius: 5px 5px 0px 0px;
+                cursor: pointer;
+                font-weight: normal;
+                
+                &.currentTab {
+                    font-weight: bold;
+                    border-bottom: none;
+                    border-right: none;
+                }
+            }
+
+            .inventoryList {
+                .respHide {
+                    display: none;
+                }
+            }
+
+            .wishList {
+                .respHide {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 55.3vw;
+                    }
+
+                    .modalContainer {
+                        .modal {
+                            .modalWishlistSwitch {
+                                input {
+                                    left: -48%
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 384px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 54.3vw;
+                    }
+
+                    .modalContainer {
+                        .modal {
+                            .modalWishlistSwitch {
+                                input {
+                                    left: -50%
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 54vw;
+                        top: 37.2%;
+                    }
+
+                    .modalContainer {
+                        .modal {
+                            .modalWishlistSwitch {
+                                input {
+                                    left: -50%
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 52.3vw;
+                    }
+
+                    .modalContainer {
+                        .modal {
+                            .modalWishlistSwitch {
+                                input {
+                                    width: 2.8125rem;
+                                }
+                                input::before {
+                                    left: 28%;
+                                    width: 1rem;
+                                    height: 1rem;
+                                }
+        
+                                input:checked::before {
+                                    left: 75%;
+                                }
+        
+                                input::after {
+                                    font-size: 0.625rem;
+                                    content: "I";
+                                }
+        
+                                input:checked::after {
+                                    content: "W";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 51vw;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .inventoryModeComp {
+        .inventorySearch {
+            .formSearch {
+                .globalManualEntry {
+                    .modalButton {
+                        left: 50vw;
+                    }
+                }
+            }
+        }
+    }
+}
