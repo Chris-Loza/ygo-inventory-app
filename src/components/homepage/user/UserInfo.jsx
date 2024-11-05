@@ -13,18 +13,21 @@ const UserInfo = () => {
   });
 
   useEffect(() => {
-    if (!auth.currentUser) return;
     const fetchUserInfo = async (uid) => {
       const docRef = doc(db, "users", uid);
       const docSnap = await getDoc(docRef);
-
-      setCurrentUser(docSnap.data());
+      if (docSnap.exists()) {
+        setCurrentUser(docSnap.data());
+      } else {
+        console.log("No such document!");
+      }
     };
-
-    return () => {
-      if (!auth.currentUser) return;
-      fetchUserInfo(auth?.currentUser.uid);
-    };
+  
+    if (auth.currentUser) {
+      fetchUserInfo(auth.currentUser.uid);
+    } else {
+      setCurrentUser({}); // Reset user state if not logged in
+    }
   }, [auth.currentUser]);
 
   const handleProfilePicChange = async (e) => {
