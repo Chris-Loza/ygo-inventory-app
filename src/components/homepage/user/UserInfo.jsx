@@ -34,7 +34,7 @@ const UserInfo = () => {
         file: file,
         url: URL.createObjectURL(file),
       });
-
+//rando
       try {
         const imageURL = await upload(file);
 
