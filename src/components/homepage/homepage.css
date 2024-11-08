@@ -79,6 +79,9 @@
         position: relative;
     }
 
+    .cardDetailsContainer {
+        flex: 3;
+    }
     .cardDetails {
         flex: 3;
         display: flex;

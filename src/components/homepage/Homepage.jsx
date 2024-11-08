@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import "./homepage.css";
 import UserInfo from "./user/UserInfo";
 import Inventory from "./inventory/Inventory";
+import CardDetails from "../cardDetails/cardDetails.jsx";
 import { fullCardList } from "../../lib/fullCardList.min.js";
 import { useGlobalState } from "../../lib/globalState";
 import { useAddToUserLists } from "../../hooks/useAddToUserLists";
@@ -192,6 +193,9 @@ const Homepage = () => {
           <Inventory />
         </div>
       ) : (
+        // <div className="cardDetailsContainer">
+        //   <CardDetails selectedCard={selectedCard}/>
+        // </div>
         <div className="cardDetails">
           <div className="cardImage">
             <div className="pictureContainer">
