@@ -157,19 +157,19 @@
         flex-direction: column;
         overflow: hidden;
 
-        .utilities {
-            height: 100%;
+        /* .utilities { */
+            /* height: 100%;
             display: flex;
             flex-direction: column;
-            flex: 8;
+            flex: 8; */
 
-            .cardSearch {
+            /* .cardSearch {
                 flex: 3;
                 padding: 0.625rem;
                 height: 100%;
-                overflow: hidden;
+                overflow: hidden; */
 
-                input {
+                /* input {
                     font-size: 0.875rem;
                     padding: 8px;
                     margin-right: 18px;
@@ -183,19 +183,19 @@
                     &:focus {
                         border: 1px solid rgba(60, 110, 208, 1);
                     }
-                }
+                } */
 
-                .searchResults {
+                /* .searchResults {
                     margin: 0.625rem auto;
                     display: flex;
                     flex-direction: column;
                     gap: 0.9375rem;
                     width: 100%;
                     max-height: 90%;
-                    overflow-y: scroll;
+                    overflow-y: scroll; */
 
-                    .result {
-                        display: flex;
+                    /* .result { */
+                        /* display: flex;
                         height: 15%;
                         width: 100%;
                         align-items: center;
@@ -203,16 +203,16 @@
                         border: 1px solid rgba(255, 255, 255, 0.125);
                         border-radius: 0.125rem;
                         padding: 0.09375rem;
-                        cursor: pointer;
+                        cursor: pointer; */
 
-                        img {
+                        /* img {
                             width: 2.5rem;
                             height: 3.125rem;
                             object-fit: contain;
                             margin: none;
-                        }
+                        } */
 
-                        .cardInfo {
+                        /* .cardInfo {
                             display: flex;
                             flex-direction: column;
                             padding: 0.3125rem;
@@ -230,36 +230,36 @@
                                 font-weight: lighter;
                                 color: rgba(255, 255, 255, 0.548);
                             }
-                        }
-                    }
+                        } */
+                    /* } */
 
-                }
+                /* } */
 
-            }
-            .separator {
+            /* } */
+            /* .separator {
                 width: 95%;
                 margin: 0.625rem auto;
                 height: 0.125rem;
                 background-color: rgba(255, 255, 255, 0.125);
-            }
+            } */
 
-            .infoSwitch {
-                display: flex;
+            /* .infoSwitch { */
+                /* display: flex;
                 align-items: center;
                 justify-content: space-evenly;
 
                 h3 {
                     font-size: 0.875rem;
-                }
+                } */
 
-                .wishListSwitch {
+                /* .wishListSwitch {
                 
                     input {
                         appearance: none;
                         position: relative;
                         width: 6.25rem;
                         height: 1.875rem;
-                        /* margin-right: 0.625rem; */
+                        margin-right: 0.625rem;
                         border-radius: 1.5625rem;
                         background-color: rgba(255, 255, 255, 0.125);
                         transition: background .3s;
@@ -307,10 +307,10 @@
                         left: 40%;
                         transform: translate(-50%, -50%);
                     }
-                }
-            }
+                } */
+            /* } */
 
-            .inventory {
+            /* .inventory {
                 flex: 2;
                 position: relative;
                 overflow-y: scroll;
@@ -414,18 +414,18 @@
                         }
                     }
                 }
-            }
-        }
+            } */
+        /* } */
 
 
-        .userDetails {
+        /* .userDetails {
             position: absolute;
             flex: 1;
             height: 100%;
             width: 25%;
             top: 82.6vh;
             z-index: 3;
-        }
+        } */
     }
 }
 

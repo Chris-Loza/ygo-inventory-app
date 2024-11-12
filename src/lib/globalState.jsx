@@ -23,6 +23,22 @@ export const GlobalStateProvider = ({ children }) => {
     count: 0,
   });
 
+  const [globalSelectedCard, setGlobalSelectedCard] = useState({
+    name: "",
+    set: [],
+    rarity: [],
+    code: [],
+    imageURL: "",
+    description: "",
+    attribute: "",
+    type: "",
+    level: "",
+    atk: "",
+    def: "",
+    linkval: "",
+    frameType: "",
+  })
+
   const [globalInventoryList, setGlobalInventoryList] = useState([]);
   const [globalWishlist, setGlobalWishlist] = useState([]);
   const [wishlistToggle, setWishlistToggle] = useState(false);
@@ -40,6 +56,8 @@ export const GlobalStateProvider = ({ children }) => {
         setWishlistToggle,
         globalManualEntryCardImage,
         setGlobalManualEntryCardImage,
+        globalSelectedCard,
+        setGlobalSelectedCard
       }}
     >
       {children}

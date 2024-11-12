@@ -1,15 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./details.css";
 import UserInfo from "../user/UserInfo";
-import { fullCardList } from "../../../../lib/fullCardList.min.js";
 import { useGlobalState } from "../../../lib/globalState";
 import { useRemoveFromUserLists } from "../../../hooks/useRemoveFromUserLists";
 import { auth } from "../../../lib/firebase";
 import { useAddToUserLists } from "../../../hooks/useAddToUserLists";
+import { fullCardList } from "../../../lib/fullCardList.min.js";
 
-const Details = (selectedCard) => {
+const Details = () => {
   const [searchInput, setSearchInput] = useState("");
   const [filteredCards, setFilteredCards] = useState([]);
+  const [selectedCard, setSelectedCard] = useState({
+    name: "",
+    set: [],
+    rarity: [],
+    code: [],
+    imageURL: "",
+    description: "",
+    attribute: "",
+    type: "",
+    level: "",
+    atk: "",
+    def: "",
+    linkval: "",
+    frameType: "",
+  });
   const [cardCounts, setCardCounts] = useState([]);
   const {
     globalInventoryList,
@@ -18,7 +33,42 @@ const Details = (selectedCard) => {
     setGlobalWishlist,
     wishlistToggle,
     setWishlistToggle,
+    globalSelectedCard,
+    setGlobalSelectedCard,
   } = useGlobalState();
+
+  const handleSets = (card) => {
+    const newCard = {
+      name: card.name,
+      set: card.card_sets.map((set) => set.set_name),
+      rarity: card.card_sets.map((set) => set.set_rarity),
+      code: card.card_sets.map((set) => set.set_code),
+      imageURL: card.card_images[0].image_url,
+      description: card.desc,
+      attribute: card.attribute,
+      race: card.race,
+      type: card.humanReadableCardType,
+      level: card.level,
+      atk: card.atk,
+      def: card.def,
+      linkval: card.linkval,
+      frameType: card.frameType,
+    };
+
+    setSelectedCard(newCard);
+    setGlobalSelectedCard(newCard);
+    setCardCounts(Array(card.card_sets.length).fill(""));
+  };
+
+  useEffect(() => {
+    if (selectedCard.set.length > 0) {
+      setCardCounts(Array(selectedCard.set.length).fill(""));
+    }
+  }, [selectedCard.set]);
+
+  const handleWishlistSwitch = () => {
+    setWishlistToggle(!wishlistToggle);
+  };
 
   const handleInputChange = (e, index) => {
     const newCounts = [...cardCounts];
@@ -185,9 +235,9 @@ const Details = (selectedCard) => {
           </div>
         </div>
         <div className="separator"></div>
-        {selectedCard.name ? (
+        {globalSelectedCard.name ? (
           <div className="infoSwitch">
-            <h3>{selectedCard.name}</h3>
+            <h3>{globalSelectedCard.name}</h3>
             <div className="wishlistSwitch">
               <input
                 type="checkbox"
@@ -201,12 +251,12 @@ const Details = (selectedCard) => {
         )}
         <div className="inventory">
           <div className="sets">
-            {selectedCard.set.map((setName, index) => (
+            {globalSelectedCard.set.map((setName, index) => (
               <div className="resultSet" key={index}>
                 <div className="setInfo">
                   <p>{setName}</p>
                   <p className="set">
-                    {selectedCard.rarity[index]} ({selectedCard.code[index]})
+                    {globalSelectedCard.rarity[index]} ({globalSelectedCard.code[index]})
                   </p>
                 </div>
                 <div className="setModifying">
@@ -223,7 +273,7 @@ const Details = (selectedCard) => {
                       className="removeButton"
                       onClick={() =>
                         handleCardRemove(
-                          selectedCard,
+                          globalSelectedCard,
                           cardCounts[index],
                           setName
                         )
@@ -236,7 +286,7 @@ const Details = (selectedCard) => {
                       type="submit"
                       onClick={() =>
                         handleCardAdd(
-                          selectedCard,
+                          globalSelectedCard,
                           cardCounts[index],
                           setName,
                           index

@@ -74,7 +74,6 @@ const UserInfo = () => {
           style={{ display: "none" }}
           onChange={handleProfilePicChange}
         />
-        {console.log(currentUser.username)}
         <h3>{currentUser?.username}</h3>
       </div>
       <button onClick={() => auth.signOut()}>Sign Out</button>

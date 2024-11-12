@@ -1,81 +1,88 @@
 import React from "react";
-import "./cardDetails.css"
+import "./cardDetails.css";
+import { useGlobalState } from "../../lib/globalState";
 
-const cardDetails = () => {
+const CardDetails = () => {
+  const { globalSelectedCard } = useGlobalState();
   return (
     <div className="cardDetails">
       <div className="cardImage">
         <div className="pictureContainer">
           <img
             src={
-              selectedCard.imageURL || "../../../images/MathmechCircular.png"
+              globalSelectedCard.imageURL ||
+              "../../../images/MathmechCircular.png"
             }
             alt="card image"
           />
         </div>
       </div>
       <div className="cardDetailsExpanded">
-        {selectedCard.name && (
+        {globalSelectedCard.name && (
           <div className="description">
             <div className="header">
               <h3>
-                {selectedCard.name} -{" "}
-                {selectedCard.set.length > 1
-                  ? selectedCard.set[0]
-                  : selectedCard.set}{" "}
+                {globalSelectedCard.name} -{" "}
+                {globalSelectedCard.set.length > 1
+                  ? globalSelectedCard.set[0]
+                  : globalSelectedCard.set}{" "}
                 (
-                {selectedCard.code.length > 1
-                  ? selectedCard.code[0]
-                  : selectedCard.code}
+                {globalSelectedCard.code.length > 1
+                  ? globalSelectedCard.code[0]
+                  : globalSelectedCard.code}
                 )
               </h3>
               <p>
-                {selectedCard.set.length > 1
-                  ? selectedCard.set[0]
-                  : selectedCard.set}
+                {globalSelectedCard.set.length > 1
+                  ? globalSelectedCard.set[0]
+                  : globalSelectedCard.set}
               </p>
             </div>
             <div className="cardDescription">
               <h3>Card Details</h3>
-              <p className="effect">{selectedCard.description}</p>
+              <p className="effect">{globalSelectedCard.description}</p>
               <div className="cardAttributes">
                 <p>
                   <b>Number:</b>{" "}
-                  {selectedCard.code.length > 1
-                    ? selectedCard.code[0]
-                    : selectedCard.code}
+                  {globalSelectedCard.code.length > 1
+                    ? globalSelectedCard.code[0]
+                    : globalSelectedCard.code}
                 </p>
                 <p>
                   <b>Rarity:</b>{" "}
-                  {selectedCard.rarity.length > 1
-                    ? selectedCard.rarity[0]
-                    : selectedCard.rarity}
+                  {globalSelectedCard.rarity.length > 1
+                    ? globalSelectedCard.rarity[0]
+                    : globalSelectedCard.rarity}
                 </p>
                 <p>
                   <b>Attribute, Type, Card Type:</b>{" "}
-                  {selectedCard.attribute ? `${selectedCard.attribute},` : ""}{" "}
-                  {selectedCard.race}, {selectedCard.type}
+                  {globalSelectedCard.attribute
+                    ? `${globalSelectedCard.attribute},`
+                    : ""}{" "}
+                  {globalSelectedCard.race}, {globalSelectedCard.type}
                 </p>
                 <p>
-                  {selectedCard.level ? (
+                  {globalSelectedCard.level ? (
                     <>
                       <b>
-                        {selectedCard.frameType !== "xyz" ? "Level:" : "Rank:"}
+                        {globalSelectedCard.frameType !== "xyz"
+                          ? "Level:"
+                          : "Rank:"}
                       </b>{" "}
-                      {selectedCard.level}
+                      {globalSelectedCard.level}
                     </>
                   ) : (
                     ""
                   )}
                 </p>
                 <p>
-                  {selectedCard.atk ? (
+                  {globalSelectedCard.atk ? (
                     <>
                       <b>A/D:</b>{" "}
-                      {selectedCard.def !== null &&
-                      selectedCard.def !== undefined
-                        ? `${selectedCard.atk}/${selectedCard.def}`
-                        : `${selectedCard.atk}/Link-${selectedCard.linkval}`}
+                      {globalSelectedCard.def !== null &&
+                      globalSelectedCard.def !== undefined
+                        ? `${globalSelectedCard.atk}/${globalSelectedCard.def}`
+                        : `${globalSelectedCard.atk}/Link-${globalSelectedCard.linkval}`}
                     </>
                   ) : (
                     ""
@@ -90,4 +97,4 @@ const cardDetails = () => {
   );
 };
 
-export default cardDetails;
+export default CardDetails;
