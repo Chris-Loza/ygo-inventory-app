@@ -49,6 +49,7 @@ function App() {
         ) : (
           <Login onRegister={handleSuccessfulRegistration} />
         )}
+        {/* <div className="myLinks">Created and Developed by Christian Loza </div> */}
         <Notifications />
       </div>
     </GlobalStateProvider>

@@ -99,7 +99,7 @@
                 position: relative;
                 width: 6.25rem;
                 height: 1.875rem;
-                margin-right: 0.625rem;
+                /* margin-right: 0.625rem; */
                 border-radius: 1.5625rem;
                 background-color: rgba(255, 255, 255, 0.125);
                 transition: background .3s;
@@ -261,6 +261,165 @@
     flex: 1;
     height: 8%;
     width: 25%;
-    top: 91.8%;
+    top: 82.6vh;
     z-index: 3;
 }
+
+@media only screen and (max-width: 1440px) {
+    .utilities {
+        .inventory {
+            .sets {
+                overflow-x: hidden;
+
+                .resultSet {
+                    width: 95%;
+                    .setModifying {
+                        form {
+                            input {
+                                width: 1.875rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .utilities {
+        .inventory {
+            .sets {
+                max-height: 72%;
+            }
+        }
+    }
+
+    .userDetails {
+        top: 82.1vh;
+    }
+}
+
+@media only screen and (max-width: 1339px) {
+    .utilities {
+        .infoSwitch {
+            .wishlistSwitch {
+                padding-right: 0.25rem;
+            }
+        }
+
+        .inventory {
+            .sets {
+                max-height: 70%;
+
+                .resultSet {
+                    .setInfo {
+                        p {
+                            width: 9rem;
+                        }
+
+                        .set {
+                            width: 9rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .userDetails {
+        top: 81.4vh;
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .utilities {
+        .cardSearch {
+            .searchResults {
+                .result {
+                    .cardInfo {
+                        span {
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .userDetails {
+        top: 81.4vh
+    }
+}
+
+/* @media only screen and (max-width: 1149px) {
+    .utilities {
+        .infoSwitch {
+            h3 {
+                font-size: 0.75rem;
+            }
+
+            .wishlistSwitch {
+                padding-right: 0rem;
+
+                input {
+                    width: 4rem;
+                }
+
+                input::before {
+                    left: 25%;
+                }
+
+                input:checked::before {
+                    left: 80%;
+                }
+
+                input::after {
+                    content: "Inv";
+                }
+
+                input:checked::after {
+                    content: "Wish";
+                }
+            }
+
+            }
+            .inventory {
+                .sets {
+                    .resultSet {
+                        width: 95%;
+                        display: flex;
+
+                        .setInfo {
+                            max-width: 5rem;
+                            font-size: 0.625rem;
+                            display: flex;
+                            flex-direction: column;
+                            padding: 0rem;
+
+                            p {
+                                white-space: nowrap;
+                                overflow-x: auto;
+                                overflow-y: hidden;
+                                max-width: 100%;
+                                margin: 0rem;
+                                padding: 0rem;
+                            }
+                        }
+
+                        .setModifying {
+                            form {
+                                input {
+                                    width: 1.875rem;
+                                }
+
+                                button {
+                                    width: 1.25rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+    }
+} */

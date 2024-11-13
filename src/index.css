@@ -30,6 +30,13 @@ body {
   backdrop-filter: blur(19px) saturate(180%);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
+
+  .myLinks {
+    position: absolute;
+    top: 102%;
+    left: 40%;
+    color: black;
+  }
 }
 
 ::-webkit-scrollbar {

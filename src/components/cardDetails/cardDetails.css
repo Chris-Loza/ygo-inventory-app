@@ -59,3 +59,46 @@
         }
     }
 }
+
+@media only screen and (max-width: 1400px) {
+    .cardDetails {
+        .cardImage {
+            .pictureContainer {
+                height: 64%;
+            }
+        }
+
+        .cardDetailsExpanded {
+            .description {
+                margin-top: 1.5rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .cardDetails {
+        .cardImage {
+            .pictureContainer {
+                height: 62%;
+            }
+        }
+
+        .cardDetailsExpanded {
+            .description {
+                margin-top: 8rem;
+
+                .cardDescription {
+                    h3 {
+                        margin: 0.5rem auto;
+                    }
+
+                    .effect {
+                        max-height: 6rem;
+                        overflow-y: scroll;
+                    }
+                }
+            }
+        }
+    }
+}

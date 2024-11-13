@@ -4,13 +4,6 @@
     height: 90vh;
     position: relative;
 
-    .myLinks {
-        position: absolute;
-        top: 91vh;
-        left: 32vw;
-        color: black;
-    }
-
     .toggleSwitch {
         position: absolute;
         left: 37.5vw;
@@ -82,7 +75,7 @@
     .cardDetailsContainer {
         flex: 3;
     }
-    .cardDetails {
+    /* .cardDetails {
         flex: 3;
         display: flex;
 
@@ -141,7 +134,7 @@
                 }
             }
         }
-    }
+    } */
 
     .mainSeparator {
         width: 0.125rem;
@@ -429,7 +422,7 @@
     }
 }
 
-@media only screen and (max-width: 1440px) {
+/* @media only screen and (max-width: 1440px) {
     .homepage {
         .details {
             .utilities {
@@ -457,9 +450,9 @@
             }
         }
     }
-}
+} */
 
-@media only screen and (max-width: 1400px) {
+/* @media only screen and (max-width: 1400px) {
     .homepage {
         .cardDetails {
             .cardImage {
@@ -481,9 +474,9 @@
             }
         }
     }
-}
+} */
 
-@media only screen and (max-width: 1339px) {
+/* @media only screen and (max-width: 1339px) {
     .homepage {
         .details {
             .utilities {
@@ -509,9 +502,9 @@
             }
         }
     }
-}
+} */
 
-@media only screen and (max-width: 1250px) {
+/* @media only screen and (max-width: 1250px) {
     .homepage {
         .cardDetails {
             .cardImage {
@@ -565,9 +558,9 @@
             }
         }
     }
-}
+} */
 
-@media only screen and (max-width: 1149px) {
+/* @media only screen and (max-width: 1149px) {
     .homepage {
         .details {
             .utilities {
@@ -644,7 +637,7 @@
             }
         }
     }
-}
+} */
 @media only screen and (max-width: 1076px) {
     .homepage {
         .details {

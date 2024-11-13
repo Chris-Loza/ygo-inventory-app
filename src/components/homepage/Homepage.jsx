@@ -13,7 +13,6 @@ const Homepage = () => {
 
   return (
     <div className="homepage">
-      {/* <div className="myLinks">Created and Developed by Christian Loza </div> */}
       <div className="toggleSwitch">
         <input type="checkbox" name="inventory" onClick={handleSwitch} />
       </div>
