@@ -102,3 +102,133 @@
         }
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .cardDetails {
+        .cardImage {
+            .pictureContainer {
+                height: 50%;
+            }
+        }
+
+        .cardDetailsExpanded {
+            .description {
+                margin-top: 8rem;
+
+                .cardDescription {
+                    h3 {
+                        margin: 0.5rem auto;
+                    }
+
+                    .effect {
+                        max-height: 6rem;
+                        overflow-y: scroll;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .cardDetails {
+        flex: 2;
+
+        .cardImage {
+            .pictureContainer {
+                height: 70%;
+
+                img {
+                    width: 70%;
+                }
+            }
+        }
+
+        .cardDetailsExpanded {
+            .description {
+                margin-top: 0rem;
+
+                h3 {
+                    font-size: 1rem;
+                }
+
+                .header {
+                    margin-top: 2rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .cardDetails {
+        flex: 2;
+
+        .cardImage {
+            .pictureContainer {
+                height: 45%;
+
+                img {
+                    width: 85%;
+                }
+            }
+        }
+
+        .cardDetailsExpanded {
+            .description {
+                margin-top: 1rem;
+
+                h3 {
+                    font-size: 0.875rem;
+                }
+
+                .header {
+                    margin-top: 2rem;
+
+                    p {
+                        font-size: 0.625rem;
+                    }
+                }
+
+                .cardDescription {
+                    margin: auto;
+
+                    p {
+                        font-size: 0.75rem;
+                    }
+
+                    b {
+                        font-size: 0.875rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .cardDetails {
+        .cardDetailsExpanded {
+            .description {
+                margin-top: 0rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .cardDetails {
+        max-width: 29.899rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .cardDetails {
+        .cardDetailsExpanded {
+            .description {
+                margin-top: 0rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

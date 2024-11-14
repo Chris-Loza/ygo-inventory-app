@@ -99,7 +99,6 @@
                 position: relative;
                 width: 6.25rem;
                 height: 1.875rem;
-                /* margin-right: 0.625rem; */
                 border-radius: 1.5625rem;
                 background-color: rgba(255, 255, 255, 0.125);
                 transition: background .3s;
@@ -107,8 +106,7 @@
                 cursor: pointer;
                 font-size: 0.875rem;
             }
-        
-        
+
             input::before {
                 content: "";
                 position: absolute;
@@ -121,15 +119,15 @@
                 background-color: white;
                 transition: left .3s;
             }
-        
+
             input:checked {
                 background-color: rgba(60, 110, 208, 1);
             }
-    
+
             input:checked::before {
                 left: 85%;
             }
-    
+
             input::after {
                 position: absolute;
                 content: "Inventory";
@@ -138,7 +136,7 @@
                 left: 60%;
                 transform: translate(-50%, -50%);
             }
-    
+
             input:checked::after {
                 position: absolute;
                 content: "Wishlist";
@@ -352,7 +350,7 @@
     }
 }
 
-/* @media only screen and (max-width: 1149px) {
+@media only screen and (max-width: 1149px) {
     .utilities {
         .infoSwitch {
             h3 {
@@ -383,43 +381,591 @@
                 }
             }
 
-            }
-            .inventory {
-                .sets {
-                    .resultSet {
-                        width: 95%;
+        }
+        .inventory {
+            .sets {
+                .resultSet {
+                    width: 95%;
+                    display: flex;
+
+                    .setInfo {
+                        max-width: 6.5rem;
+                        font-size: 0.625rem;
                         display: flex;
+                        flex-direction: column;
+                        padding: 0rem;
 
-                        .setInfo {
-                            max-width: 5rem;
-                            font-size: 0.625rem;
-                            display: flex;
-                            flex-direction: column;
+                        p {
+                            white-space: nowrap;
+                            overflow-x: auto;
+                            overflow-y: hidden;
+                            max-width: 100%;
+                            margin: 0rem;
                             padding: 0rem;
-
-                            p {
-                                white-space: nowrap;
-                                overflow-x: auto;
-                                overflow-y: hidden;
-                                max-width: 100%;
-                                margin: 0rem;
-                                padding: 0rem;
-                            }
                         }
+                    }
 
-                        .setModifying {
-                            form {
-                                input {
-                                    width: 1.875rem;
-                                }
+                    .setModifying {
+                        form {
+                            input {
+                                width: 1.875rem;
+                            }
 
-                                button {
-                                    width: 1.25rem;
-                                }
+                            button {
+                                width: 1.25rem;
                             }
                         }
                     }
                 }
             }
+        }
     }
-} */
+}
+
+@media only screen and (max-width: 1076px) {
+    .utilities {
+        .cardSearch {
+            .searchResults {
+                .result {
+                    .cardInfo {
+                        span {
+                            font-size: 0.74rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .infoSwitch {
+            h3 {
+                font-size: 0.75rem;
+            }
+
+            .wishlistSwitch {
+                input {
+                    width: 4rem;
+                }
+
+                input::before {
+                    left: 25%;
+                }
+
+                input:checked::before {
+                    left: 80%;
+                }
+
+                input::after {
+                    content: "Inv";
+                }
+
+                input:checked::after {
+                    content: "Wish";
+                }
+            }
+        }
+
+        .inventory {
+            .sets {
+                .resultSet {
+                    .setInfo {
+                        max-width: 5.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .utilities {
+        .cardSearch {
+            .searchResults {
+                .result {
+                    .cardInfo {
+                        span {
+                            text-align: left;
+                            font-size: 0.75rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .infoSwitch {
+            h3 {
+                font-size: 0.75rem;
+            }
+
+            .wishlistSwitch {
+                input {
+                    width: 4rem;
+                }
+
+                input::before {
+                    left: 25%;
+                }
+
+                input:checked::before {
+                    left: 75%;
+                }
+
+                input::after {
+                    content: "I";
+                }
+
+                input:checked::after {
+                    content: "W";
+                }
+            }
+        }
+
+        .inventory {
+            .sets {
+                .resultSet {
+                    width: 95%;
+                    display: flex;
+
+                    .setInfo {
+                        max-width: 5rem;
+                        font-size: 0.625rem;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 0rem;
+
+                        p {
+                            white-space: nowrap;
+                            overflow-x: auto;
+                            overflow-y: hidden;
+                            max-width: 100%;
+                            margin: 0rem;
+                            padding: 0rem;
+                        }
+                    }
+
+                    .setModifying {
+                        form {
+                            input {
+                                width: 1.875rem;
+                            }
+
+                            button {
+                                width: 1.25rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .utilities {
+        flex-direction: row;
+        width: 100%;
+
+        .cardSearch {
+            flex: 2;
+            padding-right: 0rem;
+
+            input {
+                margin-right: 27rem;
+                width: 60%;
+                height: 1.8rem;
+            }
+
+            .searchResults {
+                flex-direction: column;
+                max-height: 55%;
+                gap: 0.625rem;
+            }
+        }
+
+        .separator {
+            height: 66%;
+            width: 2px;
+        }
+
+        .infoSwitch {
+            position: absolute;
+            left: 57.5%;
+            top: 69%;
+            gap: 1rem;
+
+            .wishlistSwitch {
+                z-index: 99;
+
+                input {
+                    width: 100px;
+                }
+
+                input::before {
+                    left: 15%;
+                }
+
+                input:checked::before {
+                    left: 85%;
+                }
+
+                input::after {
+                    content: "Inventory";
+                }
+
+                input:checked::after {
+                    content: "Wishlist";
+                }
+            }
+        }
+
+        .inventory {
+            padding-top: 3.1rem;
+            overflow-y: hidden;
+
+            .sets {
+                height: 65%;
+                gap: 0.625rem;
+
+                .resultSet {
+                    min-height: 3.44rem;
+
+                    .setInfo {
+                        max-width: 10rem;
+                        p {
+                            font-size: 0.75rem;
+                        }
+
+                        .set {
+                            font-size: 0.625rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .userDetails {
+        top: 82vh;
+        left: 0vw;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .utilities {
+        .cardSearch {
+            input {
+                width: 95%;
+            }
+
+            .searchResults {
+                max-height: 53%;
+
+                .result {
+                    .cardInfo {
+                        span {
+                            font-size: 0.625rem;
+                        }
+
+                        p {
+                            font-size: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .infoSwitch {
+            position: absolute;
+            left: 53.5%;
+            top: 69%;
+            gap: 0.5rem;
+
+            h3 {
+                font-size: 0.625rem;
+                padding-left: 0.3125rem;
+                width: 4.375rem;
+            }
+
+            .wishlistSwitch {
+                z-index: 99;
+                        
+                input {
+                    width: 5.125rem;
+                }
+
+                input::before {
+                    left: 18%;
+                }
+
+                input:checked::before {
+                    left: 82%;
+                }
+
+                input::after {
+                    font-size: 0.625rem;
+                    content: "Inventory";
+                }
+
+                input:checked::after {
+                    content: "Wishlist";
+                }
+            }
+        }
+
+        .inventory {
+            .sets {
+                height: 60%;
+
+                .resultSet {
+                    position: relative;
+                    width: 90%;
+
+                    .setInfo {
+                        width: 4rem;
+
+                        p {
+                            font-size: 0.625rem;
+                        }
+
+                        .set {
+                            font-size: 0.5rem;
+                        }
+                    }
+
+                    .setModifying {
+                        padding-right: 0rem;
+
+                        form {
+                            gap: 0.25rem;
+
+                            input {
+                                position: absolute;
+                                width: 2.3rem;
+                                height: 1rem;
+                                top: 11%;
+                                left: 64%;
+                            }
+
+                            button {
+                                padding: 0.125rem;
+                            }
+
+                            .setListAddButton {
+                                position: absolute;
+                                left: 78%;
+                                top: 45%;
+                            }
+
+                            .removeButton {
+                                position: absolute;
+                                left: 63%;
+                                top: 45%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .userDetails {
+        top: 81.4vh;
+        width: 99.7%;
+    }
+}
+
+@media only screen and (max-width: 415px) {
+    .utilities {
+        .infoSwitch {
+            gap: 0rem;
+
+            h3 {
+                font-size: 0.5625rem;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .utilities {
+        .infoSwitch {
+            gap: 0.5rem;
+
+            .wishlistSwitch {
+                input {
+                    width: 3.75rem;
+                }
+
+                input::before {
+                    left: 25%;
+                }
+
+                input:checked::before {
+                    left: 78%;
+                }
+
+                input::after {
+                    font-size: 0.625rem;
+                    content: "Inv";
+                }
+
+                input:checked::after {
+                    content: "Wish";
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .utilities {
+        .cardSearch {
+            .searchResults {
+                max-height: 63%;
+            }
+        }
+
+        .separator {
+            height: 75%;
+        }
+
+        .infoSwitch {
+            top: 69%;
+
+            .wishlistSwitch {
+                input {
+                    width: 3.75rem;
+                }
+
+                input::before {
+                    left: 25%;
+                }
+
+                input:checked::before {
+                    left: 78%;
+                }
+
+                input::after {
+                    font-size: 0.625rem;
+                    content: "Inv";
+                }
+
+                input:checked::after {
+                    content: "Wish";
+                }
+            }
+        }
+
+        .inventory {
+            .sets {
+                height: 68%;
+
+                .resultSet {
+                    width: 92%;
+
+                    .setModifying {
+                        padding-left: 0.1875rem;
+
+                        form {
+                            .setListAddButton {
+                                left: 80%;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+
+    .userDetails {
+        top: 96%;
+    }
+}
+
+@media only screen and (max-width: 365px) {
+    .utilities {
+        .infoSwitch {
+            gap: 0.5rem;
+
+            .wishlistSwitch {
+                input {
+                    width: 2.8125rem;
+                }
+
+                input::before {
+                    left: 28%;
+                    width: 1rem;
+                    height: 1rem;
+                }
+
+                input:checked::before {
+                    left: 75%;
+                }
+
+                input::after {
+                    font-size: 0.625rem;
+                    content: "I";
+                }
+
+                input:checked::after {
+                    content: "W";
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    .utilities {
+        .infoSwitch {
+            gap: 0rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .utilities {
+        .cardSearch {
+            .searchResults {
+                overflow-x: hidden;
+            }
+        }
+
+        .inventory {
+            .sets {
+                align-items: flex-end;
+
+                .resultSet {
+                    .setInfo {
+                        width: 3rem;
+
+                        .set {
+                            font-size: 0.4375rem;
+                        }
+                    }
+
+                    .setModifying {
+                        form {
+                            gap: 0.1875rem;
+                            left: 35%;
+
+                            input {
+                                width: 2.1rem;
+                                top: 10%;
+                            }
+
+                            .removeButton {
+                                width: 1rem;
+                            }
+
+                            .setListAddButton {
+                                width: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
