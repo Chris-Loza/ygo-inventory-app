@@ -171,6 +171,14 @@ const Details = () => {
       );
     }
   };
+
+  const handleFocus = () => {
+    document.body.style.overflow = "hidden";
+  };
+
+  const handleBlur = () => {
+    document.body.style.overflow = "auto";
+  };
   return (
     <>
       <div className="utilities">
@@ -179,6 +187,8 @@ const Details = () => {
             type="text"
             name="cardName"
             placeholder="Enter Card Name..."
+            onFocus={handleFocus}
+            onBlur={handleBlur}
             onChange={(e) => {
               const newSearchInput = e.target.value;
               setSearchInput(newSearchInput);
@@ -256,7 +266,8 @@ const Details = () => {
                 <div className="setInfo">
                   <p>{setName}</p>
                   <p className="set">
-                    {globalSelectedCard.rarity[index]} ({globalSelectedCard.code[index]})
+                    {globalSelectedCard.rarity[index]} (
+                    {globalSelectedCard.code[index]})
                   </p>
                 </div>
                 <div className="setModifying">
