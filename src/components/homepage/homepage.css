@@ -118,8 +118,10 @@
 
 @media only screen and (max-width: 425px) {
     .homepage {
+        height: 90svh;
         width: 85vw;
         .toggleSwitch {
+            top: 2svh;
             left: 40%;
         }
     }

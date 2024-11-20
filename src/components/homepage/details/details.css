@@ -688,7 +688,7 @@
 
             .wishlistSwitch {
                 z-index: 99;
-                        
+
                 input {
                     width: 5.125rem;
                 }
@@ -769,7 +769,7 @@
     }
 
     .userDetails {
-        top: 81.4vh;
+        top: 81.4svh;
         width: 99.7%;
     }
 }
