@@ -770,8 +770,9 @@
 
     .userDetails {
         position: fixed;
-        top: 93%;
-        left: 0;
+        top: 93svh;
+        left: -2px;
+        width: 101%;
     }
 }
 

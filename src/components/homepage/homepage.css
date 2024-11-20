@@ -122,8 +122,8 @@
         width: 85vw; */
         margin: auto;
         .toggleSwitch {
-            top: 2svh;
-            left: 40%;
+            top: -3svh;
+            left: 73%;
         }
 
         .inventoryMode {
