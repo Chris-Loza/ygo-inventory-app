@@ -124,6 +124,10 @@
             top: 2svh;
             left: 40%;
         }
+
+        .cardDetailsContainer {
+            height: 36.73rem;
+        }
     }
 }
 
