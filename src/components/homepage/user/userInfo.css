@@ -91,6 +91,17 @@
     }
 }
 
+@media only screen and (max-width: 425px) {
+    .userInfo {
+        padding: 8px;
+        border-radius: 0px;
+        .user {
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+}
 @media only screen and (max-width: 375px) {
     .userInfo {
         .user {

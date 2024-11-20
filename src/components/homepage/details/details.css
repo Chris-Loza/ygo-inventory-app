@@ -769,8 +769,9 @@
     }
 
     .userDetails {
-        top: 81.4svh;
-        width: 99.7%;
+        position: fixed;
+        top: 93%;
+        left: 0;
     }
 }
 
