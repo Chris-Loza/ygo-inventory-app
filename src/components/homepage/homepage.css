@@ -143,9 +143,9 @@
 
 @media only screen and (max-width: 375px) {
     .homepage {
-        .toggleSwitch {
+        /* .toggleSwitch {
             left: 37.5%;
-        }
+        } */
 
         .inventoryMode {
             max-height: 29.899rem;
