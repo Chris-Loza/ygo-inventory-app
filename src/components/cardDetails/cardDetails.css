@@ -193,6 +193,7 @@
 
                 .cardDescription {
                     margin: auto;
+                    overflow-y: scroll;
 
                     p {
                         font-size: 0.75rem;

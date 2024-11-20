@@ -102,7 +102,7 @@
 
         .inventoryMode {
             flex: 2;
-            max-height: 478.39px;
+            max-height: 29.899rem;
         }
 
         .cardDetailsContainer {
@@ -126,7 +126,8 @@
         }
 
         .cardDetailsContainer {
-            height: 36.73rem;
+            max-height: 29.899rem;
+            /* height: 36.73rem; */
         }
     }
 }
