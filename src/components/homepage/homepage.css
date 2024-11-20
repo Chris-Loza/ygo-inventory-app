@@ -133,6 +133,10 @@
             max-height: 29.899rem;
             /* height: 36.73rem; */
         }
+
+        .details {
+            max-height: 15.076rem;
+        }
     }
 }
 
@@ -143,7 +147,7 @@
         }
 
         .inventoryMode {
-            height: 29.899rem;
+            max-height: 29.899rem;
         }
     }
 }
