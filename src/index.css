@@ -58,8 +58,8 @@ body {
     background-color: rgba(30, 44, 70, 0.85);
     border: none;
     border-radius: 0px;
-    /* overflow-y: auto;
-    overflow-x: hidden; */
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 }
 /* @media only screen and (max-width: 375px) {
