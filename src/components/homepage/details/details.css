@@ -589,6 +589,7 @@
         .cardSearch {
             flex: 2;
             padding-right: 0rem;
+            max-height: 10.7rem;
 
             input {
                 margin-right: 27rem;
@@ -598,17 +599,18 @@
 
             .searchResults {
                 flex-direction: column;
-                max-height: 55%;
+                max-height: 81%;
                 gap: 0.625rem;
             }
         }
 
         .separator {
-            height: 66%;
+            height: 93%;
             width: 2px;
         }
 
         .cardSetUtils {
+            max-height: 10.7rem;
             .infoSwitch {
                 position: absolute;
                 left: 57.5%;
@@ -645,11 +647,11 @@
                 overflow-y: hidden;
     
                 .sets {
-                    height: 65%;
+                    height: 100%;
                     gap: 0.625rem;
     
                     .resultSet {
-                        min-height: 3.44rem;
+                        min-height: 3.4375rem;
     
                         .setInfo {
                             max-width: 10rem;
@@ -667,22 +669,24 @@
         }
     }
 
-    .userDetails {
+    /* .userDetails {
         top: 82vh;
         left: 0vw;
         width: 100%;
-    }
+    } */
 }
 
 @media only screen and (max-width: 425px) {
     .utilities {
         .cardSearch {
+            max-height: 100%;
+
             input {
                 width: 95%;
             }
 
             .searchResults {
-                max-height: 41%;
+                max-height: 84.2%;
 
                 .result {
                     .cardInfo {
@@ -698,8 +702,12 @@
             }
         }
 
+        .separator {
+            height: 95%;
+        }
+
         .cardSetUtils {
-            min-height: 26.8rem;
+            max-height: 100%;
             padding: 0.625rem;
             padding-left: 0rem;
             padding-right: 0rem;
@@ -742,9 +750,9 @@
     
             .inventory {
                 padding-top: 0rem;
-                margin-top: 0.35rem;
+                margin-top: 0.29rem;
                 .sets {
-                    height: 45.2%;
+                    /* height: 45.2%; */
     
                     .resultSet {
                         position: relative;
@@ -799,12 +807,12 @@
         }
     }
 
-    .userDetails {
+    /* .userDetails {
         position: fixed;
         top: 92svh;
         left: -2px;
         width: 101%;
-    }
+    } */
 }
 
 @media only screen and (max-width: 415px) {
@@ -820,9 +828,9 @@
         }
     }
 
-    .userDetails {
+    /* .userDetails {
         top: 92.4%;
-    }
+    } */
 }
 
 @media only screen and (max-width: 390px) {
@@ -860,15 +868,15 @@
 
 @media only screen and (max-width: 375px) {
     .utilities {
-        .cardSearch {
+        /* .cardSearch {
             .searchResults {
                 max-height: 40%;
             }
-        }
+        } */
 
-        .separator {
+        /* .separator {
             height: 75%;
-        }
+        } */
 
         .cardSetUtils {
             .infoSwitch {
@@ -900,7 +908,7 @@
 
             .inventory {
                 .sets {
-                    height: 44%;
+                    height: 100%;
 
                     .resultSet {
                         width: 92%;
@@ -921,9 +929,9 @@
         }
     }
 
-    .userDetails {
+    /* .userDetails {
         top: 91.2%;
-    }
+    } */
 }
 
 @media only screen and (max-width: 365px) {
@@ -985,6 +993,7 @@
                     align-items: flex-end;
 
                     .resultSet {
+                        min-height: 29%;
                         .setInfo {
                             width: 4rem;
 

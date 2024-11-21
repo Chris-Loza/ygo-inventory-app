@@ -53,9 +53,10 @@ body {
 
 @media only screen and (max-width: 425px) {
   .container {
-    width: 100vw;
+    width: 101vw;
     height: 100svh;
     background-color: rgba(30, 44, 70, 0.85);
+    border: none;
     border-radius: 0px;
     overflow-y: auto;
     overflow-x: hidden;

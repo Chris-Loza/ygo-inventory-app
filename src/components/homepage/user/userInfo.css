@@ -116,6 +116,7 @@
 
         button {
             width: 20%;
+            padding: 8px;
         }
     }
 }
@@ -123,11 +124,18 @@
 @media only screen and (max-width: 425px) {
     .userInfo {
         padding: 8px;
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
         border-radius: 0px;
         .user {
             h3 {
                 font-size: 18px;
             }
+        }
+
+        button {
+            width: 21%;
         }
     }
 }

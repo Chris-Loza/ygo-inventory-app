@@ -148,6 +148,7 @@
         /* height: 90svh;
         width: 85vw; */
         margin: auto;
+        margin-bottom: 0rem;
         .toggleSwitch {
             top: 1%;
             left: 4%;
@@ -166,6 +167,10 @@
 
         .details {
             min-height: 15.076rem;
+
+            .utilitiesContainer {
+                max-height: 78%;
+            }
         }
     }
 }
