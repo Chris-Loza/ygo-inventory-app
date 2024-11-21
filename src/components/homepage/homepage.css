@@ -173,6 +173,7 @@
 
         .mainSeparator {
             margin-top: 0rem;
+            z-index: 2;
         }
 
         .details {
