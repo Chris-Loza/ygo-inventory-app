@@ -171,11 +171,6 @@
             /* height: 36.73rem; */
         }
 
-        .mainSeparator {
-            margin-top: 0rem;
-            z-index: 2;
-        }
-
         .details {
             min-height: 15.076rem;
             overflow-y: hidden;
