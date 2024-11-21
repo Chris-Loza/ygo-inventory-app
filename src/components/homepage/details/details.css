@@ -681,6 +681,8 @@
         .cardSearch {
             max-height: 100%;
 
+            overflow-y: hidden;
+
             input {
                 width: 95%;
             }
