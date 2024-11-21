@@ -799,8 +799,8 @@
     }
 
     .userDetails {
-        position: fixed;
-        top: 93svh;
+        position: absolute;
+        top: 86svh;
         left: -2px;
         width: 101%;
     }
@@ -820,7 +820,7 @@
     }
 
     .userDetails {
-        top: 92.4%;
+        top: 96.4%;
     }
 }
 
@@ -921,7 +921,7 @@
     }
 
     .userDetails {
-        top: 91.2%;
+        top: 96.2%;
     }
 }
 
