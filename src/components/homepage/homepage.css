@@ -169,6 +169,7 @@
 
         .details {
             min-height: 15.076rem;
+            overflow-y: hidden;
 
             .utilitiesContainer {
                 max-height: 78%;
