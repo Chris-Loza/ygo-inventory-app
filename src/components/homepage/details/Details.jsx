@@ -191,8 +191,8 @@ const Details = () => {
             type="text"
             name="cardName"
             placeholder="Enter Card Name..."
-            onFocus={handleFocus}
-            onBlur={handleBlur}
+            // onFocus={handleFocus}
+            // onBlur={handleBlur}
             onChange={(e) => {
               const newSearchInput = e.target.value;
               setSearchInput(newSearchInput);
