@@ -175,9 +175,9 @@ const Details = () => {
   const searchRef = useRef(null);
   const handleFocus = () => {
     document.body.style.overflow = "hidden";
-    // setTimeout(() => {
-    //   searchRef.current?.scrollIntoView({ behavior: "smooth" });
-    // }, 300)
+    setTimeout(() => {
+      searchRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 300)
   };
 
   const handleBlur = () => {
@@ -191,8 +191,9 @@ const Details = () => {
             type="text"
             name="cardName"
             placeholder="Enter Card Name..."
-            // onFocus={handleFocus}
-            // onBlur={handleBlur}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            ref={searchRef}
             onChange={(e) => {
               const newSearchInput = e.target.value;
               setSearchInput(newSearchInput);
