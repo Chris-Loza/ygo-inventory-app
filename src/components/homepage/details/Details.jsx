@@ -172,11 +172,12 @@ const Details = () => {
     }
   };
 
-  const searchRef = useRef(null);
+  const utilsRef = useRef(null);
+  const inputRef = useRef(null);
   const handleFocus = () => {
     document.body.style.overflow = "hidden";
     setTimeout(() => {
-      searchRef.current?.scrollIntoView({ behavior: "smooth" });
+      utilsRef.current?.scrollIntoView({ behavior: "smooth" });
     }, 100)
   };
 
@@ -187,12 +188,12 @@ const Details = () => {
   const handleKeyDown = (e) => {
     if (e.key === "Enter") {
       e.preventDefault();
-      searchRef.current?.blur();
+      inputRef.current?.blur();
     }
   }
   return (
     <>
-      <div className="utilities" ref={searchRef}>
+      <div className="utilities" ref={utilsRef}>
         <div className="cardSearch">
           <input
             type="text"
@@ -201,6 +202,7 @@ const Details = () => {
             onFocus={handleFocus}
             onBlur={handleBlur}
             onKeyDown={handleKeyDown}
+            ref={inputRef}
             onChange={(e) => {
               const newSearchInput = e.target.value;
               setSearchInput(newSearchInput);
