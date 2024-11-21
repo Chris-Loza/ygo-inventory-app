@@ -147,6 +147,8 @@
     .homepage {
         /* height: 90svh;
         width: 85vw; */
+        overflow-y: auto;
+        overflow-x: hidden;
         margin: auto;
         margin-bottom: 0rem;
         .toggleSwitch {
