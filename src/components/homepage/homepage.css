@@ -149,6 +149,10 @@
         width: 85vw; */
         overflow-y: scroll;
         overflow-x: hidden;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
         margin: auto;
         margin-bottom: 0rem;
         .toggleSwitch {
