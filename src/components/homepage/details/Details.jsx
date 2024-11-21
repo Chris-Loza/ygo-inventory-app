@@ -175,7 +175,9 @@ const Details = () => {
   const searchRef = useRef(null);
   const handleFocus = () => {
     //document.body.style.overflow = "hidden";
-    searchRef.current?.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      searchRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 300)
   };
 
   const handleBlur = () => {
