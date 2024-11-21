@@ -678,6 +678,8 @@
 
 @media only screen and (max-width: 425px) {
     .utilities {
+        overflow-y: hidden;
+        overflow-x: hidden;
         .cardSearch {
             max-height: 100%;
 
