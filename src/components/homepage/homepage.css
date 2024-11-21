@@ -137,7 +137,7 @@
         }
 
         .details {
-            max-height: 15.076rem;
+            min-height: 15.076rem;
         }
     }
 }
