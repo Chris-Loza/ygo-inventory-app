@@ -131,7 +131,8 @@
         }
 
         .cardDetailsContainer {
-            max-height: 24.095rem;
+            /* max-height: 24.095rem; */
+            max-height: 29.899rem;
             /* height: 36.73rem; */
         }
 
@@ -141,17 +142,17 @@
     }
 }
 
-@media only screen and (max-width: 375px) {
+/* @media only screen and (max-width: 375px) {
     .homepage {
-        /* .toggleSwitch {
+        .toggleSwitch {
             left: 70%;
-        } */
+        }
 
         .inventoryMode {
             max-height: 24.095rem;
         }
     }
-}
+} */
 
 @media only screen and (max-width: 320px) {
     .homepage {
