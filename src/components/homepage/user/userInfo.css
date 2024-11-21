@@ -139,12 +139,29 @@
         }
     }
 }
+
+@media only screen and (max-width: 415px) {
+    .userInfo {
+        button {
+            width: 25%;
+        }
+    }
+}
+
 @media only screen and (max-width: 375px) {
     .userInfo {
         .user {
             h3 {
                 font-size: 18px;
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 335px) {
+    .userInfo {
+        button {
+            width: 35%;
         }
     }
 }
