@@ -127,12 +127,13 @@
         }
 
         .inventoryMode {
-            max-height: 29.899rem;
+            /* max-height: 29.899rem; */
+            max-height: 24.095rem;
         }
-
+        
         .cardDetailsContainer {
-            /* max-height: 24.095rem; */
-            max-height: 29.899rem;
+            max-height: 24.095rem;
+            /* max-height: 29.899rem; */
             /* height: 36.73rem; */
         }
 
