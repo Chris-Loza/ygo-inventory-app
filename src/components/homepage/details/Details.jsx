@@ -177,12 +177,19 @@ const Details = () => {
     document.body.style.overflow = "hidden";
     setTimeout(() => {
       searchRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 300)
+    }, 100)
   };
 
   const handleBlur = () => {
     document.body.style.overflow = "auto";
   };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      searchRef.current?.blur();
+    }
+  }
   return (
     <>
       <div className="utilities">
@@ -193,6 +200,7 @@ const Details = () => {
             placeholder="Enter Card Name..."
             onFocus={handleFocus}
             onBlur={handleBlur}
+            onKeyDown={handleKeyDown}
             ref={searchRef}
             onChange={(e) => {
               const newSearchInput = e.target.value;
