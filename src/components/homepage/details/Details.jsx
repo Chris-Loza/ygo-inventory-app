@@ -192,7 +192,7 @@ const Details = () => {
   }
   return (
     <>
-      <div className="utilities">
+      <div className="utilities" ref={searchRef}>
         <div className="cardSearch">
           <input
             type="text"
@@ -201,7 +201,6 @@ const Details = () => {
             onFocus={handleFocus}
             onBlur={handleBlur}
             onKeyDown={handleKeyDown}
-            ref={searchRef}
             onChange={(e) => {
               const newSearchInput = e.target.value;
               setSearchInput(newSearchInput);
