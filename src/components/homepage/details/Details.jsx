@@ -245,71 +245,73 @@ const Details = () => {
           </div>
         </div>
         <div className="separator"></div>
-        {globalSelectedCard.name ? (
-          <div className="infoSwitch">
-            <h3>{globalSelectedCard.name}</h3>
-            <div className="wishlistSwitch">
-              <input
-                type="checkbox"
-                name="inventory"
-                onClick={handleWishlistSwitch}
-              />
-            </div>
-          </div>
-        ) : (
-          ""
-        )}
-        <div className="inventory">
-          <div className="sets">
-            {globalSelectedCard.set.map((setName, index) => (
-              <div className="resultSet" key={index}>
-                <div className="setInfo">
-                  <p>{setName}</p>
-                  <p className="set">
-                    {globalSelectedCard.rarity[index]} (
-                    {globalSelectedCard.code[index]})
-                  </p>
-                </div>
-                <div className="setModifying">
-                  <form onSubmit={(e) => e.preventDefault()}>
-                    <input
-                      type="text"
-                      name="cardCount"
-                      placeholder="0"
-                      value={cardCounts[index]}
-                      onChange={(e) => handleInputChange(e, index)}
-                    />
-                    <button
-                      type="submit"
-                      className="removeButton"
-                      onClick={() =>
-                        handleCardRemove(
-                          globalSelectedCard,
-                          cardCounts[index],
-                          setName
-                        )
-                      }
-                    >
-                      -
-                    </button>
-                    <button
-                      className="setListAddButton"
-                      type="submit"
-                      onClick={() =>
-                        handleCardAdd(
-                          globalSelectedCard,
-                          cardCounts[index],
-                          setName,
-                          index
-                        )
-                      }
-                    >
-                      +
-                    </button>
-                  </form>
-                </div>
+        <div className="cardSetUtils">
+          {globalSelectedCard.name ? (
+            <div className="infoSwitch">
+              <h3>{globalSelectedCard.name}</h3>
+              <div className="wishlistSwitch">
+                <input
+                  type="checkbox"
+                  name="inventory"
+                  onClick={handleWishlistSwitch}
+                />
               </div>
-            ))}
+            </div>
+          ) : (
+            ""
+          )}
+          <div className="inventory">
+            <div className="sets">
+              {globalSelectedCard.set.map((setName, index) => (
+                <div className="resultSet" key={index}>
+                  <div className="setInfo">
+                    <p>{setName}</p>
+                    <p className="set">
+                      {globalSelectedCard.rarity[index]} (
+                      {globalSelectedCard.code[index]})
+                    </p>
+                  </div>
+                  <div className="setModifying">
+                    <form onSubmit={(e) => e.preventDefault()}>
+                      <input
+                        type="text"
+                        name="cardCount"
+                        placeholder="0"
+                        value={cardCounts[index]}
+                        onChange={(e) => handleInputChange(e, index)}
+                      />
+                      <button
+                        type="submit"
+                        className="removeButton"
+                        onClick={() =>
+                          handleCardRemove(
+                            globalSelectedCard,
+                            cardCounts[index],
+                            setName
+                          )
+                        }
+                      >
+                        -
+                      </button>
+                      <button
+                        className="setListAddButton"
+                        type="submit"
+                        onClick={() =>
+                          handleCardAdd(
+                            globalSelectedCard,
+                            cardCounts[index],
+                            setName,
+                            index
+                          )
+                        }
+                      >
+                        +
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
