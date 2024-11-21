@@ -3,6 +3,7 @@ import "./homepage.css";
 import Inventory from "./inventory/Inventory";
 import CardDetails from "../cardDetails/CardDetails.jsx";
 import Details from "./details/Details.jsx";
+import UserInfo from "./user/UserInfo.jsx";
 
 const Homepage = () => {
   const [inventoryMode, setInventoryMode] = useState(false);
@@ -27,8 +28,11 @@ const Homepage = () => {
       )}
       <div className="mainSeparator"></div>
       <div className="details">
-        <div className="utilities">
+        <div className="utilitiesContainer">
           <Details />
+        </div>
+        <div className="userDisplay">
+          <UserInfo />
         </div>
       </div>
     </div>

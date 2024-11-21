@@ -319,9 +319,9 @@ const Details = () => {
           </div>
         </div>
       </div>
-      <div className="userDetails">
+      {/* <div className="userDetails">
         <UserInfo />
-      </div>
+      </div> */}
     </>
   );
 };

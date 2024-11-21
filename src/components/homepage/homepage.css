@@ -79,7 +79,7 @@
     .mainSeparator {
         width: 0.125rem;
         margin: 0.625rem auto;
-        height: 80vh;
+        height: 81.5vh;
         background-color: rgba(255, 255, 255, 0.125);
     }
 
@@ -89,6 +89,33 @@
         height: 100%;
         flex-direction: column;
         overflow: hidden;
+
+        .utilitiesContainer {
+            flex: 10;
+        }
+
+        .userDisplay {
+            display: flex;
+            flex: 1;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .homepage {
+        .details {
+            height: 99.9%;
+        }
+    }
+}
+
+@media only screen and (max-width: 1250px) {
+    .homepage {
+        .mainSeparator {
+            height: 80.5vh;
+        }
     }
 }
 

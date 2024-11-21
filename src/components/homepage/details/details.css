@@ -7,7 +7,7 @@
     .cardSearch {
         flex: 3;
         padding: 0.625rem;
-        min-height: 26.80rem;
+        max-height: 26rem;
         overflow: hidden;
 
         input {
@@ -61,6 +61,7 @@
 
                     span {
                         font-size: 1rem;
+                        text-align: left;
                     }
 
                     p {
@@ -165,7 +166,7 @@
                 flex-direction: column;
                 gap: 0.9375rem;
                 overflow-y: scroll;
-                max-height: 69%;
+                max-height: 100%;
     
                 .resultSet {
                     display: flex;
@@ -262,14 +263,14 @@
     }
 }
 
-.userDetails {
+/* .userDetails {
     position: absolute;
     flex: 1;
     height: 8%;
     width: 25%;
     top: 82.6vh;
     z-index: 100;
-}
+} */
 
 @media only screen and (max-width: 1440px) {
     .utilities {
@@ -297,23 +298,25 @@
 @media only screen and (max-width: 1400px) {
     .utilities {
         .cardSetUtils {
+            max-height: 15.5rem;
+
             .inventory {
                 .sets {
-                    max-height: 72%;
+                    max-height: 100%;
                 }
             }
         }
     }
 
-    .userDetails {
+    /* .userDetails {
         top: 82.1vh;
-    }
+    } */
 }
 
 @media only screen and (max-width: 1339px) {
     .utilities {
         .cardSetUtils {
-            max-height: 18rem;
+            max-height: 14.3rem;
             .infoSwitch {
                 .wishlistSwitch {
                     padding-right: 0.25rem;
@@ -322,8 +325,6 @@
     
             .inventory {
                 .sets {
-                    max-height: 69%;
-    
                     .resultSet {
                         .setInfo {
                             p {
@@ -340,9 +341,9 @@
         }
     }
 
-    .userDetails {
+    /* .userDetails {
         top: 81.4vh;
-    }
+    } */
 }
 
 @media only screen and (max-width: 1250px) {
@@ -360,9 +361,9 @@
         }
     }
 
-    .userDetails {
+    /* .userDetails {
         top: 81.4vh
-    }
+    } */
 }
 
 @media only screen and (max-width: 1149px) {
