@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./details.css";
 import UserInfo from "../user/UserInfo";
 import { useGlobalState } from "../../../lib/globalState";
@@ -172,8 +172,10 @@ const Details = () => {
     }
   };
 
+  const searchRef = useRef(null);
   const handleFocus = () => {
     document.body.style.overflow = "hidden";
+    searchRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleBlur = () => {
