@@ -1203,6 +1203,7 @@
                                 
                                 .buttons {
                                     align-items: flex-start;
+                                    min-height: 9.77rem;
         
                                     button {
                                         margin-bottom: 2rem;
