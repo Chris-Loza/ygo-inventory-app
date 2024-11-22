@@ -111,9 +111,9 @@ const Login = ({ onRegister }) => {
             style={{ display: "none" }}
             onChange={handleAvatar}
           />
-          <input type="text" placeholder="Username" name="username" onClick={handleScrollIntoView} />
-          <input type="text" placeholder="Email" name="email" onClick={handleScrollIntoView} />
-          <input type="password" placeholder="Password" name="password" onClick={handleScrollIntoView} />
+          <input type="text" placeholder="Username" name="username" onFocus={handleScrollIntoView} />
+          <input type="text" placeholder="Email" name="email" onFocus={handleScrollIntoView} />
+          <input type="password" placeholder="Password" name="password" onFocus={handleScrollIntoView} />
           <button disabled={loading}>{loading ? "Loading" : "Sign Up"}</button>
         </form>
       </div>
