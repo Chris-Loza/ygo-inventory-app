@@ -62,10 +62,9 @@ const Login = ({ onRegister }) => {
     setLoading(false);
   };
 
-  const registerRef = useRef(null);
-  const handleRegisterRef = () => {
+  const handleScrollIntoView = (e) => {
     setTimeout(() => {
-      registerRef.current?.scrollIntoView({ behavior: "smooth" });
+      e.target.scrollIntoView({ behavior: "smooth" });
     }, 100)
   }
   const handleLogin = async (e) => {
@@ -112,9 +111,9 @@ const Login = ({ onRegister }) => {
             style={{ display: "none" }}
             onChange={handleAvatar}
           />
-          <input type="text" placeholder="Username" name="username" ref={registerRef} onClick={handleRegisterRef} />
-          <input type="text" placeholder="Email" name="email" ref={registerRef} onClick={handleRegisterRef} />
-          <input type="password" placeholder="Password" name="password" ref={registerRef} onClick={handleRegisterRef} />
+          <input type="text" placeholder="Username" name="username" onClick={handleScrollIntoView} />
+          <input type="text" placeholder="Email" name="email" onClick={handleScrollIntoView} />
+          <input type="password" placeholder="Password" name="password" onClick={handleScrollIntoView} />
           <button disabled={loading}>{loading ? "Loading" : "Sign Up"}</button>
         </form>
       </div>
