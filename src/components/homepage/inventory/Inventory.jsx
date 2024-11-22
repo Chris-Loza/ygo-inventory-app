@@ -252,27 +252,31 @@ const Inventory = () => {
       cardCount,
     } = Object.fromEntries(formData);
 
-    const newCard = {
-      name: cardName,
-      set: setName,
-      rarity: cardRarity,
-      code: setCode,
-      imageURL:
-        globalManualEntryCardImage.url !== ""
-          ? await upload(globalManualEntryCardImage.file)
-          : "../../../../images/backOfYGOCard.jpg",
-      description: cardDesc,
-      attribute: attribute,
-      race: race,
-      type: cardType,
-      level: monsterLevel,
-      atk: monsterAtk,
-      def: monsterDef,
-      linkval: linkVal,
-      count: cardCount !== "" ? Number(cardCount) : 0,
-    };
-    setManualCardName(newCard.name);
-    setGlobalManualEntryCard(newCard);
+    if (cardCount === 0 || cardCount === "") {
+      toast.error("Please enter a valid card count!");
+    } else {
+      const newCard = {
+        name: cardName,
+        set: setName,
+        rarity: cardRarity,
+        code: setCode,
+        imageURL:
+          globalManualEntryCardImage.url !== ""
+            ? await upload(globalManualEntryCardImage.file)
+            : "../../../../images/backOfYGOCard.jpg",
+        description: cardDesc,
+        attribute: attribute,
+        race: race,
+        type: cardType,
+        level: monsterLevel,
+        atk: monsterAtk,
+        def: monsterDef,
+        linkval: linkVal,
+        count: cardCount !== "" ? Number(cardCount) : 0,
+      };
+      setManualCardName(newCard.name);
+      setGlobalManualEntryCard(newCard);
+    }
   };
 
   useEffect(() => {
@@ -351,7 +355,7 @@ const Inventory = () => {
   const handleModalWishlistSwitch = () => {
     setWishlistToggle(!wishlistToggle);
   };
-//randodd
+  //randodd
   useEffect(() => {
     const docRef = doc(db, "users", auth.currentUser.uid);
     const unSub = onSnapshot(
@@ -360,8 +364,10 @@ const Inventory = () => {
         if (docSnap.exists()) {
           const inventoryData = docSnap.data().inventory || [];
           const wishlistData = docSnap.data().wishlist || [];
-          setGlobalInventoryList(inventoryData.reverse());
-          setGlobalWishlist(wishlistData.reverse());
+          setGlobalInventoryList(inventoryData);
+          setGlobalWishlist(wishlistData);
+          // setGlobalInventoryList(inventoryData.reverse());
+          // setGlobalWishlist(wishlistData.reverse());
         } else {
           toast.error("No Document found!");
         }
@@ -641,7 +647,7 @@ const Inventory = () => {
                     </div>
                   </div>
                 ))
-              : globalInventoryList.map((card, index) => (
+              : globalInventoryList.slice().reverse().map((card, index) => (
                   <div className="item" key={index}>
                     <img src={card.imageURL} alt="Card Image" />
                     <div className="itemInfo">
@@ -816,7 +822,7 @@ const Inventory = () => {
                     </div>
                   </div>
                 ))
-              : globalWishlist.map((card, index) => (
+              : globalWishlist.slice().reverse().map((card, index) => (
                   <div className="item" key={index}>
                     <img src={card.imageURL} alt="Card Image" />
                     <div className="itemInfo">

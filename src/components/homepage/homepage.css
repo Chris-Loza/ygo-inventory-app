@@ -64,6 +64,13 @@
         }
     }
 
+    .musicPlayerContainer {
+        position: absolute;
+        top: 1.6vh;
+        left: 60vw;
+        z-index: 98;
+    }
+
     .inventoryMode {
         flex: 3;
         display: flex;
@@ -127,6 +134,10 @@
             left: 45%;
         }
 
+        .musicPlayerContainer {
+            left: 92.5%;
+        }
+
         .inventoryMode {
             flex: 2;
             max-height: 29.899rem;
@@ -158,6 +169,11 @@
         .toggleSwitch {
             top: 1%;
             left: 4%;
+        }
+
+        .musicPlayerContainer {
+            top: 0.46%;
+            left: 88.5%;
         }
 
         .inventoryMode {
@@ -196,6 +212,10 @@
 
 @media only screen and (max-width: 320px) {
     .homepage {
+        .musicPlayerContainer {
+            left: 85.5%;
+        }
+
         .inventoryMode {
             .modalButton {
                 top: 10.3%;
