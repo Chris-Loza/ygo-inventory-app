@@ -1181,36 +1181,37 @@
                                     content: "Wish";
                                 }
                             }
-                        }
 
-                        form {
-                            .manualCardInfo {
-                                gap: 20px;
-                                width: 90%;
-                                overflow-y: scroll;
-                                overflow-x: hidden;
-                                flex-direction: column;
-                                height: 22rem;
-    
-                                div {
-                                    margin: 0 auto;
-                                    width: 14rem;
-    
-                                    input {
-                                        height: 2rem;
+                            form {
+                                .manualCardInfo {
+                                    gap: 20px;
+                                    width: 90%;
+                                    overflow-y: scroll;
+                                    overflow-x: hidden;
+                                    flex-direction: column;
+                                    height: 22rem;
+        
+                                    div {
+                                        margin: 0 auto;
+                                        width: 14rem;
+        
+                                        input {
+                                            height: 2rem;
+                                        }
                                     }
                                 }
-                            }
-                            
-                            .buttons {
-                                align-items: flex-end;
-    
-                                button {
-                                    margin-bottom: 2rem;
+                                
+                                .buttons {
+                                    align-items: flex-start;
+        
+                                    button {
+                                        margin-bottom: 2rem;
+                                    }
                                 }
+        
                             }
-    
                         }
+
                     }
                 }
             }
