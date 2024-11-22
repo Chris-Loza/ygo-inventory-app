@@ -96,7 +96,7 @@ const Login = ({ onRegister }) => {
         </form>
       </div>
       <div className="separator"></div>
-      <div className="content" ref={registerRef}>
+      <div className="content" >
         <h2>Create an Account</h2>
         <form onSubmit={handleRegister}>
           <label htmlFor="file">
@@ -112,9 +112,9 @@ const Login = ({ onRegister }) => {
             style={{ display: "none" }}
             onChange={handleAvatar}
           />
-          <input type="text" placeholder="Username" name="username" onClick={handleRegisterRef} />
-          <input type="text" placeholder="Email" name="email" onClick={handleRegisterRef} />
-          <input type="password" placeholder="Password" name="password" onClick={handleRegisterRef} />
+          <input type="text" placeholder="Username" name="username" ref={registerRef} onClick={handleRegisterRef} />
+          <input type="text" placeholder="Email" name="email" ref={registerRef} onClick={handleRegisterRef} />
+          <input type="password" placeholder="Password" name="password" ref={registerRef} onClick={handleRegisterRef} />
           <button disabled={loading}>{loading ? "Loading" : "Sign Up"}</button>
         </form>
       </div>
