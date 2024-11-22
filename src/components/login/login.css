@@ -134,7 +134,7 @@
         position: relative;
         height: 87svh;
         margin: auto;
-        margin-top: 0rem;
+        /* margin-top: 0rem; */
         gap: 0rem;
 
         .content {
@@ -142,7 +142,7 @@
             align-items: center;
             justify-content: center;
             gap: calc(20px / 16);
-            padding-bottom: 0rem;
+            padding-bottom: 1rem;
             flex: 1;
             width: 100%;
             margin: 0 0;
@@ -150,6 +150,16 @@
             h2 {
                 font-size: 1.3rem;
                 margin: 1rem 0rem;
+            }
+
+            form {
+                input {
+                    padding: 15px;
+                }
+
+                button {
+                    padding: 15px;
+                }
             }
         }
 
