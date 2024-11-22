@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import "./login.css";
 import {
   createUserWithEmailAndPassword,
@@ -62,6 +62,12 @@ const Login = ({ onRegister }) => {
     setLoading(false);
   };
 
+  const registerRef = useRef(null);
+  const handleRegisterRef = () => {
+    setTimeout(() => {
+      registerRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, 100)
+  }
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -92,7 +98,7 @@ const Login = ({ onRegister }) => {
       <div className="separator"></div>
       <div className="content">
         <h2>Create an Account</h2>
-        <form onSubmit={handleRegister}>
+        <form onSubmit={handleRegister} ref={registerRef} onClick={handleRegisterRef}>
           <label htmlFor="file">
             <img
               src={avatar.url || "/images/AddPhotoAlternateNoFill.svg"}

@@ -62,7 +62,7 @@ const UserInfo = () => {
   return (
     <div className="userInfo">
       <div className="user">
-        <label htmlFor="file">
+        <label htmlFor="file" title="Change profile picture">
           <img
             src={currentUser?.avatar || "../../../images/UserIconNoFill.svg"}
             alt="User Icon"
