@@ -58,15 +58,13 @@ const Login = ({ onRegister }) => {
         setLoading(false);
       }
     }
-    
+
     setLoading(false);
   };
 
   const handleScrollIntoView = (e) => {
-    setTimeout(() => {
-      e.target.scrollIntoView({ behavior: "smooth" });
-    }, 100)
-  }
+    e.target.scrollIntoView({ behavior: "smooth" });
+  };
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -95,7 +93,7 @@ const Login = ({ onRegister }) => {
         </form>
       </div>
       <div className="separator"></div>
-      <div className="content" >
+      <div className="content">
         <h2>Create an Account</h2>
         <form onSubmit={handleRegister}>
           <label htmlFor="file">
@@ -111,9 +109,24 @@ const Login = ({ onRegister }) => {
             style={{ display: "none" }}
             onChange={handleAvatar}
           />
-          <input type="text" placeholder="Username" name="username" onFocus={handleScrollIntoView} />
-          <input type="text" placeholder="Email" name="email" onFocus={handleScrollIntoView} />
-          <input type="password" placeholder="Password" name="password" onFocus={handleScrollIntoView} />
+          <input
+            type="text"
+            placeholder="Username"
+            name="username"
+            onFocus={handleScrollIntoView}
+          />
+          <input
+            type="text"
+            placeholder="Email"
+            name="email"
+            onFocus={handleScrollIntoView}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            onFocus={handleScrollIntoView}
+          />
           <button disabled={loading}>{loading ? "Loading" : "Sign Up"}</button>
         </form>
       </div>
