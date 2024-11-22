@@ -1148,9 +1148,10 @@
                     }
 
                     .modalContainer {
-                        height: 101%;
+                        height: 100%;
 
                         .modal {
+                            height: 100%;
                             .closeIcon {
                                 left: 88.5%;
                             }
