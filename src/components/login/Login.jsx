@@ -96,9 +96,9 @@ const Login = ({ onRegister }) => {
         </form>
       </div>
       <div className="separator"></div>
-      <div className="content">
+      <div className="content" ref={registerRef}>
         <h2>Create an Account</h2>
-        <form onSubmit={handleRegister} ref={registerRef} onClick={handleRegisterRef}>
+        <form onSubmit={handleRegister} onClick={handleRegisterRef}>
           <label htmlFor="file">
             <img
               src={avatar.url || "/images/AddPhotoAlternateNoFill.svg"}
