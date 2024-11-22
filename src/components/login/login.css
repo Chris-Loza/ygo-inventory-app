@@ -136,6 +136,7 @@
         margin: auto;
         margin-top: 0.837rem;
         gap: 0rem;
+        overflow: auto;
 
         .content {
             display: flex;

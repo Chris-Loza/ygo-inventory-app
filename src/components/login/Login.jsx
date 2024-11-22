@@ -63,7 +63,9 @@ const Login = ({ onRegister }) => {
   };
 
   const handleScrollIntoView = (e) => {
-    e.target.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      e.target.scrollIntoView({ behavior: "smooth" });
+    }, 100);
   };
   const handleLogin = async (e) => {
     e.preventDefault();
