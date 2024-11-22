@@ -132,7 +132,8 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
-        height: 94svh;
+        height: 87svh;
+        margin: auto;
         gap: 0rem;
 
         .content {
