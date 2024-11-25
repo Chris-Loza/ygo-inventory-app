@@ -263,15 +263,6 @@
     }
 }
 
-/* .userDetails {
-    position: absolute;
-    flex: 1;
-    height: 8%;
-    width: 25%;
-    top: 82.6vh;
-    z-index: 100;
-} */
-
 @media only screen and (max-width: 1440px) {
     .utilities {
         .cardSetUtils {
@@ -307,10 +298,6 @@
             }
         }
     }
-
-    /* .userDetails {
-        top: 82.1vh;
-    } */
 }
 
 @media only screen and (max-width: 1339px) {
@@ -340,10 +327,6 @@
             }
         }
     }
-
-    /* .userDetails {
-        top: 81.4vh;
-    } */
 }
 
 @media only screen and (max-width: 1250px) {
@@ -360,10 +343,6 @@
             }
         }
     }
-
-    /* .userDetails {
-        top: 81.4vh
-    } */
 }
 
 @media only screen and (max-width: 1149px) {
@@ -668,12 +647,6 @@
             }
         }
     }
-
-    /* .userDetails {
-        top: 82vh;
-        left: 0vw;
-        width: 100%;
-    } */
 }
 
 @media only screen and (max-width: 425px) {
@@ -813,13 +786,6 @@
             }
         }
     }
-
-    /* .userDetails {
-        position: fixed;
-        top: 92svh;
-        left: -2px;
-        width: 101%;
-    } */
 }
 
 @media only screen and (max-width: 415px) {
@@ -834,10 +800,6 @@
             }
         }
     }
-
-    /* .userDetails {
-        top: 92.4%;
-    } */
 }
 
 @media only screen and (max-width: 390px) {
@@ -875,16 +837,6 @@
 
 @media only screen and (max-width: 375px) {
     .utilities {
-        /* .cardSearch {
-            .searchResults {
-                max-height: 40%;
-            }
-        } */
-
-        /* .separator {
-            height: 75%;
-        } */
-
         .cardSetUtils {
             .infoSwitch {
                 top: 56.2%;
@@ -929,16 +881,11 @@
                                 }
                             }
                         }
-    
                     }
                 }
             }
         }
     }
-
-    /* .userDetails {
-        top: 91.2%;
-    } */
 }
 
 @media only screen and (max-width: 365px) {

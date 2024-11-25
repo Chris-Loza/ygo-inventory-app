@@ -41,7 +41,6 @@ const Inventory = () => {
     const globalIndex = globalInventoryList.findIndex((globalCard) => {
       return globalCard.name === card.name && globalCard.set === card.set;
     });
-    //random
     if (inputCount !== "" && !isNaN(inputCount)) {
       if (globalIndex !== -1) {
         const docSnap = await getDoc(docRef);
@@ -234,7 +233,6 @@ const Inventory = () => {
     e.preventDefault();
 
     const formData = new FormData(e.target);
-    // const imageURL = await upload(globalManualEntryCardImage.file)
 
     const {
       cardName,
@@ -279,6 +277,7 @@ const Inventory = () => {
     }
   };
 
+// UseEffect to Add Manual Entry Card to appropriate list
   useEffect(() => {
     const handleManualCardUpdate = async () => {
       const docRef = doc(db, "users", auth.currentUser.uid);
@@ -355,7 +354,8 @@ const Inventory = () => {
   const handleModalWishlistSwitch = () => {
     setWishlistToggle(!wishlistToggle);
   };
-  //randodd
+
+// UseEffect used to populate inventorylist and wishlist on start of app
   useEffect(() => {
     const docRef = doc(db, "users", auth.currentUser.uid);
     const unSub = onSnapshot(
@@ -366,8 +366,6 @@ const Inventory = () => {
           const wishlistData = docSnap.data().wishlist || [];
           setGlobalInventoryList(inventoryData);
           setGlobalWishlist(wishlistData);
-          // setGlobalInventoryList(inventoryData.reverse());
-          // setGlobalWishlist(wishlistData.reverse());
         } else {
           toast.error("No Document found!");
         }
@@ -380,7 +378,6 @@ const Inventory = () => {
   }, []);
 
   const [manualCardName, setManualCardName] = useState("");
-  const [manualCardImage, setManualCardImage] = useState("");
   return (
     <div className="inventoryModeComp">
       <div className="inventorySearch">

@@ -2,6 +2,7 @@ import { doc, getDoc } from "firebase/forestore";
 import { create } from "zustand";
 import { db } from "./firebase";
 
+// Set Current User using Zustand, unused in this
 export const useUserStore = create((set) => ({
   currentUser: null,
   isLoading: true,

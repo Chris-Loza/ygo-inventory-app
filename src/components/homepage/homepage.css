@@ -157,8 +157,6 @@
 
 @media only screen and (max-width: 425px) {
     .homepage {
-        /* height: 90svh;
-        width: 85vw; */
         overflow-y: scroll;
         overflow-x: hidden;
 
@@ -178,14 +176,11 @@
         }
 
         .inventoryMode {
-            /* max-height: 29.899rem; */
             max-height: 24.095rem;
         }
         
         .cardDetailsContainer {
             max-height: 24.095rem;
-            /* max-height: 29.899rem; */
-            /* height: 36.73rem; */
         }
 
         .details {
@@ -198,18 +193,6 @@
         }
     }
 }
-
-/* @media only screen and (max-width: 375px) {
-    .homepage {
-        .toggleSwitch {
-            left: 70%;
-        }
-
-        .inventoryMode {
-            max-height: 24.095rem;
-        }
-    }
-} */
 
 @media only screen and (max-width: 320px) {
     .homepage {

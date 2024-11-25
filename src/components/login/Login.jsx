@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import "./login.css";
 import {
   createUserWithEmailAndPassword,
@@ -67,6 +67,7 @@ const Login = ({ onRegister }) => {
       e.target.scrollIntoView({ behavior: "smooth" });
     }, 100);
   };
+  
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);

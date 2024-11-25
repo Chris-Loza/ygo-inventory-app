@@ -18,6 +18,7 @@ body {
   justify-content: center;
 }
 
+/* Main App Container */
 .container {
   position: fixed;
   top: 50%;
@@ -30,14 +31,9 @@ body {
   backdrop-filter: blur(19px) saturate(180%);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  .myLinks {
-    position: absolute;
-    top: 102%;
-    left: 40%;
-    color: black;
-  }
 }
 
+/* Scroll bar styling */
 ::-webkit-scrollbar {
   width: 0.5em;
 }
@@ -70,29 +66,3 @@ body {
     }
   }
 }
-/* @media only screen and (max-width: 375px) {
-  .container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    width: 85vw;
-    height: 95svh;
-    background-color: rgba(30, 44, 70, 0.75);
-    backdrop-filter: blur(19px) saturate(180%);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-  }
-} */
-
-/* @media only screen and (orientation: landscape) and (max-width: 1023px) {
-  .container {
-    display: none;
-  }
-} */
-/* @media only screen and (max-width: 1023px) {
-  .container {
-    display: none;
-  }
-} */

@@ -12,6 +12,7 @@ const UserInfo = () => {
     url: "",
   });
 
+  // UseEffect used to SetCurrent user to logged in user, runs whenever currentUser changes
   useEffect(() => {
     const fetchUserInfo = async (uid) => {
       const docRef = doc(db, "users", uid);
@@ -37,7 +38,7 @@ const UserInfo = () => {
         file: file,
         url: URL.createObjectURL(file),
       });
-//rando
+      
       try {
         const imageURL = await upload(file);
 

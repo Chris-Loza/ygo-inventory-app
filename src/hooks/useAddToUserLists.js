@@ -7,7 +7,7 @@ export const useAddToUserLists = async (uid, newCard, wishlistToggle) => {
 
   try {
     const docSnap = await getDoc(docRef);
-    console.log(newCard);
+    // console.log(newCard);
     if (docSnap.exists()) {
       const currentInventory = docSnap.data().inventory;
       const currentWishlist = docSnap.data().wishlist;

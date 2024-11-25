@@ -15,7 +15,7 @@ function App() {
   const handleSuccessfulRegistration = () => {
     setIsLoggedIn(true);
   };
-
+  // UseEffect to detect whenever a user is changed or logs in, gets user data
   useEffect(() => {
     const unSub = onAuthStateChanged(auth, async (user) => {
       if (user) {
@@ -49,7 +49,6 @@ function App() {
         ) : (
           <Login onRegister={handleSuccessfulRegistration} />
         )}
-        {/* <div className="myLinks">Created and Developed by Christian Loza </div> */}
         <Notifications />
       </div>
     </GlobalStateProvider>

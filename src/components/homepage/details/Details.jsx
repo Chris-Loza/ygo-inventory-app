@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./details.css";
-import UserInfo from "../user/UserInfo";
 import { useGlobalState } from "../../../lib/globalState";
 import { useRemoveFromUserLists } from "../../../hooks/useRemoveFromUserLists";
 import { auth } from "../../../lib/firebase";
@@ -60,21 +59,24 @@ const Details = () => {
     setCardCounts(Array(card.card_sets.length).fill(""));
   };
 
+  // Used to populate an array to keep track of card count changes in lists
   useEffect(() => {
     if (selectedCard.set.length > 0) {
       setCardCounts(Array(selectedCard.set.length).fill(""));
     }
   }, [selectedCard.set]);
 
-  const handleWishlistSwitch = () => {
-    setWishlistToggle(!wishlistToggle);
-  };
-
+  // Used to change a count in aforementioned card count array
   const handleInputChange = (e, index) => {
     const newCounts = [...cardCounts];
     newCounts[index] = e.target.value;
     setCardCounts(newCounts);
   };
+
+  const handleWishlistSwitch = () => {
+    setWishlistToggle(!wishlistToggle);
+  };
+
 
   const handleCardAdd = (selectedCard, cardCount, setName, index) => {
     const newCard = {
@@ -329,9 +331,6 @@ const Details = () => {
           </div>
         </div>
       </div>
-      {/* <div className="userDetails">
-        <UserInfo />
-      </div> */}
     </>
   );
 };
